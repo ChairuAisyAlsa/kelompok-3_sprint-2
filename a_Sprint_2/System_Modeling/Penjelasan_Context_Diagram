@@ -1,0 +1,8 @@
+Penjelasan Context Diagram
+Context Diagram Sistem ClosetGirls ThriftShop menggambarkan hubungan antara sistem dengan pihak yang berinteraksi langsung dengan sistem, yaitu Pembeli dan Admin.
+1. Pembeli
+Pembeli berinteraksi dengan sistem untuk melakukan registrasi, login, pencarian produk, melihat katalog dan detail produk, mengelola keranjang, melakukan checkout, serta mengelola profil. Sistem memberikan informasi akun, produk, katalog, hasil pencarian, detail produk, keranjang, dan konfirmasi checkout kepada pembeli.
+2. Admin
+Admin berinteraksi dengan sistem untuk melakukan pengelolaan produk. Sistem memberikan informasi produk kepada admin.
+3. Sistem ClosetGirls ThriftShop
+Sistem menjadi pusat pengolahan data dan informasi antara Pembeli dan Admin. Semua proses interaksi Pembeli dan Admin dilakukan melalui sistem ClosetGirls ThriftShop.
