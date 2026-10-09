@@ -31,9 +31,9 @@ Fitur yang dirancang meliputi registrasi, login, beranda, pencarian produk, kata
 
 | Anggota | Tanggung Jawab |
 |---|---|
-| 🎨 Chairu Aisy Alsa | UI/UX Design |
+| 🎨 Chairu Aisy Alsa | UI/UX Design Figma |
 | 💻 Anisa Putri | Development & Coding |
-| 📋 Dinar Zahara | Project Chapter, Function Point & System Modeling |
+| 📋 Dinar Zahara | System Modeling |
 | 🧪 Zikrul | Testing & Integration |
 
 ---
