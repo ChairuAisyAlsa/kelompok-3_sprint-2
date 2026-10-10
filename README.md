@@ -55,13 +55,13 @@ Tahap ini digunakan untuk menggambarkan interaksi pengguna dengan sistem serta a
   - Menyimpan diagram dalam format PNG.
   - Menambahkan dokumentasi Context Diagram.
 
-- [ ] **Use Case Diagram**
+- [x] **Use Case Diagram**
   - Mengidentifikasi aktor Pembeli dan Admin.
   - Menggambarkan fungsi yang dapat dilakukan setiap aktor.
   - Memetakan fitur sistem seperti registrasi, login, pencarian produk, katalog, detail produk, keranjang, checkout, profil, dan logout.
   - Menggambarkan hubungan aktor dengan setiap use case.
 
-- [ ] **Sequence Diagram**
+- [x] **Sequence Diagram**
   - Menggambarkan urutan interaksi aktor dengan sistem.
   - Menunjukkan urutan pesan dalam proses yang dipilih.
   - Menjelaskan alur interaksi untuk fitur utama, seperti login, pencarian produk, dan checkout.
@@ -86,7 +86,7 @@ Tahap ini berfokus pada implementasi website berdasarkan desain dan kebutuhan si
 Tahap ini bertujuan memastikan fitur yang dikembangkan berjalan sesuai kebutuhan.
 
 - [x] Menguji proses registrasi dan login.
-- [ ] Menguji pencarian, katalog, dan detail produk.
+- [x] Menguji pencarian, katalog, dan detail produk.
 - [ ] Menguji penambahan dan pengelolaan produk dalam keranjang.
 - [ ] Menguji proses checkout.
 - [ ] Menguji halaman profil dan logout.
