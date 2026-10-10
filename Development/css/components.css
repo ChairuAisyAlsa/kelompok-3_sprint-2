@@ -1,0 +1,96 @@
+/* components.css — komponen yang dipakai berulang */
+
+/* ===== Tombol ===== */
+.btn {
+  width: 100%; height: 46px; border-radius: 10px; font-size: 14px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  transition: transform .1s ease, background .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--pink); color: var(--white); }
+.btn-primary:hover { background: var(--pink-dark); }
+.btn-outline { background: var(--white); color: var(--maroon); border: 1.5px solid var(--border); }
+.btn-sm { height: 32px; font-size: 12px; border-radius: 8px; }
+.icon-btn { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; color: var(--maroon); flex: none; }
+.icon-btn:active { background: var(--bg-soft); }
+
+/* ===== Kolom pencarian ===== */
+.search-bar {
+  display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px;
+  background: var(--white); border: 1.5px solid var(--maroon); border-radius: 10px;
+}
+.search-bar:focus-within { border-color: var(--pink-dark); }
+.search-bar input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-size: 13px; color: var(--text); }
+.search-bar .icon { color: var(--maroon); flex: none; }
+.search-bar button { display: grid; place-items: center; color: var(--muted); }
+.search-row { display: flex; align-items: center; gap: 8px; padding: 0 16px; }
+.search-row .search-bar { flex: 1; }
+
+/* ===== Chip kategori ===== */
+.chips { display: flex; gap: 8px; padding: 10px 16px; overflow-x: auto; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; height: 28px; padding: 0 14px; border-radius: 8px; font-size: 12px; font-weight: 600;
+  background: var(--white); border: 1.5px solid var(--border); color: var(--maroon);
+}
+.chip.is-active { background: var(--pink); border-color: var(--pink); color: var(--white); }
+
+/* ===== Kartu produk ===== */
+.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 4px 16px; }
+.product-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.product-card__img { display: block; aspect-ratio: 1 / 1; background: var(--bg-soft); overflow: hidden; position: relative; }
+.product-card__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.product-card__body { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.product-card__body h3 { font-size: 12px; font-weight: 600; line-height: 1.3; min-height: 31px; }
+.product-card__meta { font-size: 10px; color: var(--muted); }
+.product-card__price { font-size: 13px; font-weight: 700; color: var(--pink-dark); margin-bottom: 6px; }
+.product-card__body .btn { margin-top: auto; }
+
+/* ===== Stepper jumlah ===== */
+.qty { display: inline-flex; align-items: center; gap: 10px; }
+.qty button {
+  width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center;
+  background: var(--bg-soft); color: var(--maroon);
+}
+.qty button:active { background: var(--pink); color: var(--white); }
+.qty span { min-width: 16px; text-align: center; font-size: 13px; font-weight: 600; }
+
+/* ===== Navigasi bawah ===== */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 430px; height: var(--nav-h); z-index: 10;
+  display: flex; align-items: center; justify-content: space-around;
+  background: var(--white); border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.nav-item { position: relative; flex: 1; height: 100%; display: grid; place-items: center; color: var(--muted); }
+.nav-item.is-active { color: var(--pink-dark); }
+.nav-item.is-active::after {
+  content: ''; position: absolute; bottom: 8px; left: 50%; width: 5px; height: 5px;
+  margin-left: -2.5px; border-radius: 50%; background: var(--pink-dark);
+}
+.nav-badge {
+  position: absolute; top: 10px; left: calc(50% + 6px); min-width: 16px; height: 16px; padding: 0 4px;
+  border-radius: 99px; background: var(--pink-dark); color: var(--white);
+  font-size: 10px; font-weight: 700; display: grid; place-items: center;
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed; left: 50%; bottom: calc(var(--nav-h) + 20px); transform: translate(-50%, 12px);
+  background: var(--maroon); color: var(--white); font-size: 12px; font-weight: 500;
+  padding: 10px 18px; border-radius: 99px; opacity: 0; pointer-events: none; z-index: 50;
+  transition: opacity .2s ease, transform .2s ease; max-width: 90%; text-align: center;
+}
+.toast.is-show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ===== Overlay sukses ===== */
+.overlay { position: fixed; inset: 0; z-index: 60; background: rgba(61, 31, 43, .5); display: grid; place-items: center; padding: 24px; }
+.modal { width: 100%; max-width: 320px; background: var(--white); border-radius: 18px; padding: 24px 20px; text-align: center; }
+.modal .check { width: 56px; height: 56px; border-radius: 50%; background: var(--pink); color: var(--white); display: grid; place-items: center; margin: 0 auto 12px; }
+.modal h3 { color: var(--maroon); font-size: 16px; }
+.modal p { font-size: 12px; color: var(--muted); margin: 6px 0 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
