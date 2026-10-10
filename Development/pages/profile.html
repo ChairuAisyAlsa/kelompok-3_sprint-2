@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profil – ClosetGirls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-page="profile">
+  <main class="app">
+    <header class="page-header">
+      <button class="icon-btn" data-back="home.html" aria-label="Kembali"><i data-icon="back"></i></button>
+      <h1>PROFIL</h1>
+      <button class="icon-btn" data-action="settings" aria-label="Pengaturan"><i data-icon="settings"></i></button>
+    </header>
+    <section class="profile-card">
+      <div class="avatar" id="profile-avatar">A</div>
+      <div><h2 id="profile-name">Nama</h2><p id="profile-email">email</p><span class="badge">Member</span></div>
+    </section>
+    <section class="stats">
+      <div class="stat"><strong id="stat-orders">0</strong><span>Pemesanan</span></div>
+      <div class="stat"><strong>4,8</strong><span>Rating</span></div>
+      <div class="stat"><strong id="stat-fav">0</strong><span>Favorit</span></div>
+    </section>
+    <section class="menu-group">
+        <button class="menu-item" data-action="info"><i data-icon="user" data-size="20"></i><span>Informasi Pribadi</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+        <button class="menu-item" data-action="address"><i data-icon="pin" data-size="20"></i><span>Alamat</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+        <button class="menu-item" data-action="payment"><i data-icon="card" data-size="20"></i><span>Metode Pembayaran</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+    </section>
+    <section class="menu-group">
+        <button class="menu-item" data-action="orders"><i data-icon="bag" data-size="20"></i><span>Pesanan Saya</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+        <button class="menu-item" data-action="favorites"><i data-icon="heart" data-size="20"></i><span>Favorite</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+        <button class="menu-item" data-action="help"><i data-icon="help" data-size="20"></i><span>Bantuan</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+        <button class="menu-item" data-action="logout"><i data-icon="logout" data-size="20"></i><span>Keluar Akun</span><i class="chev" data-icon="chevron" data-size="18"></i></button>
+    </section>
+  </main>
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi utama"></nav>
+  <script src="../js/data/products.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

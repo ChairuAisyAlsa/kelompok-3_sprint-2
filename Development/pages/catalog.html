@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Katalog – ClosetGirls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-page="catalog">
+  <main class="app">
+    <header class="page-header">
+      <button class="icon-btn" data-back="home.html" aria-label="Kembali"><i data-icon="back"></i></button>
+      <h1>KATALOG</h1>
+      <span class="header-spacer"></span>
+    </header>
+    <div class="search-row">
+      <label class="search-bar"><i data-icon="search" data-size="18"></i><input type="search" id="search-input" placeholder="Cari produk" aria-label="Cari produk"></label>
+      <button class="icon-btn" id="btn-filter" aria-label="Urutkan"><i data-icon="filter"></i></button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="product-grid" id="grid"></div>
+  </main>
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi utama"></nav>
+  <script src="../js/data/products.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

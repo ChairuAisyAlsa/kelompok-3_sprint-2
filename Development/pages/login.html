@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Masuk – ClosetGirls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body data-page="login">
+  <main class="app">
+    <div class="auth">
+      <div class="auth-logo"><img src="../assets/images/logo.svg" alt="ClosetGirls Thrift Store"></div>
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="input-wrap"><i data-icon="mail" data-size="18"></i><input type="email" id="email" placeholder="Email" autocomplete="email"></div>
+        <div class="input-wrap"><i data-icon="lock" data-size="18"></i><input type="password" id="password" placeholder="Kata sandi" autocomplete="current-password"><button type="button" data-toggle-pass aria-label="Tampilkan kata sandi"><i data-icon="eye" data-size="18"></i></button></div>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button class="btn" type="submit">Masuk</button>
+      </form>
+      <p class="auth-switch">Belum punya akun? <a href="register.html">Daftar disini</a></p>
+    </div>
+  </main>
+
+  <script src="../js/data/products.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

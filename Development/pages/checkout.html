@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Checkout – ClosetGirls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-page="checkout">
+  <main class="app">
+    <header class="page-header">
+      <button class="icon-btn" data-back="cart.html" aria-label="Kembali"><i data-icon="back"></i></button>
+      <h1>CHECKOUT</h1>
+      <span class="header-spacer"></span>
+    </header>
+    <section class="form-section">
+      <h2>Informasi Pembeli</h2>
+      <input class="field-box" id="co-name" placeholder="Nama lengkap" aria-label="Nama lengkap">
+      <input class="field-box" id="co-phone" placeholder="Nomor telepon" aria-label="Nomor telepon" type="tel">
+    </section>
+    <section class="form-section">
+      <h2>Alamat Pengiriman</h2>
+      <button class="field-box" id="btn-address"><span id="co-address"></span><i data-icon="chevron" data-size="18"></i></button>
+    </section>
+    <section class="form-section">
+      <h2>Produk yang Dibeli</h2>
+      <div class="checkout-products" id="co-products"></div>
+    </section>
+    <section class="form-section">
+      <h2 class="pay-title"><i data-icon="card" data-size="16"></i>Metode Pembayaran</h2>
+      <div class="pay-methods" id="pay-methods" role="radiogroup" aria-label="Metode pembayaran"></div>
+      <div class="bank-list" id="bank-list">
+        <p class="bank-list__label">Pilih bank untuk transfer</p>
+        <div class="bank-grid" id="bank-grid" role="radiogroup" aria-label="Pilih bank"></div>
+      </div>
+    </section>
+    <section class="total-box">
+      <div class="total-row"><span>Subtotal</span><span id="co-subtotal">Rp0</span></div>
+      <div class="total-row"><span>Ongkos kirim</span><span id="co-shipping">Rp0</span></div>
+      <div class="total-row total-row--grand"><span>Total Harga</span><span id="co-total">Rp0</span></div>
+    </section>
+    <div class="checkout-submit"><button class="btn btn-primary" id="btn-pay">Bayar Sekarang</button></div>
+  </main>
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi utama"></nav>
+  <script src="../js/data/products.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
