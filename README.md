@@ -71,15 +71,15 @@ Tahap ini digunakan untuk menggambarkan interaksi pengguna dengan sistem serta a
 
 Tahap ini berfokus pada implementasi website berdasarkan desain dan kebutuhan sistem.
 
-- [ ] Menyiapkan struktur dan kebutuhan pengembangan website.
-- [ ] Mengimplementasikan halaman registrasi dan login.
-- [ ] Mengembangkan halaman beranda dan pencarian produk.
-- [ ] Mengimplementasikan katalog dan detail produk.
-- [ ] Mengembangkan fungsi keranjang belanja.
-- [ ] Mengimplementasikan alur checkout.
-- [ ] Mengembangkan halaman profil dan fungsi logout.
-- [ ] Menyesuaikan tampilan dengan desain UI/UX yang telah dibuat.
-- [ ] Mengintegrasikan halaman dan fungsi yang telah dikembangkan.
+- [x] Menyiapkan struktur dan kebutuhan pengembangan website.
+- [x] Mengimplementasikan halaman registrasi dan login.
+- [x] Mengembangkan halaman beranda dan pencarian produk.
+- [x] Mengimplementasikan katalog dan detail produk.
+- [x] Mengembangkan fungsi keranjang belanja.
+- [x] Mengimplementasikan alur checkout.
+- [x] Mengembangkan halaman profil dan fungsi logout.
+- [x] Menyesuaikan tampilan dengan desain UI/UX yang telah dibuat.
+- [x] Mengintegrasikan halaman dan fungsi yang telah dikembangkan.
 
 ## 🧪 03. TESTING
 
@@ -87,9 +87,9 @@ Tahap ini bertujuan memastikan fitur yang dikembangkan berjalan sesuai kebutuhan
 
 - [x] Menguji proses registrasi dan login.
 - [x] Menguji pencarian, katalog, dan detail produk.
-- [ ] Menguji penambahan dan pengelolaan produk dalam keranjang.
-- [ ] Menguji proses checkout.
-- [ ] Menguji halaman profil dan logout.
+- [x] Menguji penambahan dan pengelolaan produk dalam keranjang.
+- [x] Menguji proses checkout.
+- [x] Menguji halaman profil dan logout.
 - [ ] Mencatat kesalahan atau bug yang ditemukan.
 - [ ] Mendokumentasikan hasil pengujian.
 
