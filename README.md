@@ -34,7 +34,7 @@ Fitur yang dirancang meliputi registrasi, login, beranda, pencarian produk, kata
 | 🎨 Chairu Aisy Alsa | UI/UX Design Figma |
 | 💻 Anisa Putri | Development & Coding |
 | 📋 Dinar Zahara | System Modeling |
-| 🧪 Zikrul | Testing & Integration |
+| 🧪 Zikrul Khalis | Testing & Integration |
 
 ---
 
@@ -85,7 +85,7 @@ Tahap ini berfokus pada implementasi website berdasarkan desain dan kebutuhan si
 
 Tahap ini bertujuan memastikan fitur yang dikembangkan berjalan sesuai kebutuhan.
 
-- [ ] Menguji proses registrasi dan login.
+- [x] Menguji proses registrasi dan login.
 - [ ] Menguji pencarian, katalog, dan detail produk.
 - [ ] Menguji penambahan dan pengelolaan produk dalam keranjang.
 - [ ] Menguji proses checkout.
