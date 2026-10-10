@@ -3,9 +3,9 @@
 
 ## 1. Pendahuluan
 
-Sequence Diagram merupakan diagram yang digunakan untuk menggambarkan urutan interaksi antara pengguna, halaman sistem, proses sistem, dan database dalam menjalankan suatu fitur.
+Sequence Diagram merupakan diagram yang digunakan untuk menggambarkan urutan interaksi antara pengguna, halaman sistem, sistem, dan database dalam menjalankan suatu fitur.
 
-Pada proyek ClosetGirls ThriftShop, Sequence Diagram digunakan untuk menjelaskan alur kerja fitur-fitur utama sistem penjualan pakaian thrift, mulai dari login hingga pengguna keluar dari akun.
+Pada proyek ClosetGirls ThriftShop, Sequence Diagram digunakan untuk menjelaskan alur kerja fitur-fitur utama sistem mulai dari proses login hingga pengguna keluar dari akun.
 
 ## 2. Tujuan Sequence Diagram
 
@@ -13,16 +13,18 @@ Tujuan pembuatan Sequence Diagram pada proyek ClosetGirls ThriftShop adalah:
 
 1. Menggambarkan urutan interaksi antara pengguna dan sistem.
 2. Menjelaskan proses yang terjadi pada setiap fitur.
-3. Mempermudah anggota kelompok memahami alur kerja sistem sebelum tahap pengkodean.
+3. Mempermudah anggota kelompok memahami alur kerja sistem.
 4. Menjadi acuan dalam proses pengembangan dan pengujian sistem.
 
-## 3. Sequence Diagram Login
+---
 
-### Pengertian
+# 3. Sequence Diagram Login
+
+## Pengertian
 
 Sequence Diagram Login menggambarkan proses ketika pengguna memasukkan email dan kata sandi untuk masuk ke dalam sistem ClosetGirls ThriftShop.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -31,12 +33,13 @@ sequenceDiagram
     participant Sistem
     participant DB as Database
 
-    Pengguna->>Login: Membuka halaman login
+    Pengguna->>Login: Membuka halaman Login
     Pengguna->>Login: Memasukkan email dan kata sandi
     Pengguna->>Login: Menekan tombol Login
     Login->>Sistem: Mengirim data login
     Sistem->>DB: Memeriksa data akun
     DB-->>Sistem: Mengirim hasil pemeriksaan
+
     alt Data valid
         Sistem-->>Login: Login berhasil
         Login-->>Pengguna: Menampilkan halaman Beranda
@@ -46,7 +49,7 @@ sequenceDiagram
     end
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pengguna membuka halaman Login.
 2. Pengguna memasukkan email dan kata sandi.
@@ -55,13 +58,15 @@ sequenceDiagram
 5. Jika data valid, pengguna diarahkan ke halaman Beranda.
 6. Jika data tidak valid, sistem menampilkan pesan kesalahan.
 
-## 4. Sequence Diagram Registrasi
+---
 
-### Pengertian
+# 4. Sequence Diagram Registrasi
+
+## Pengertian
 
 Sequence Diagram Registrasi menggambarkan proses pembuatan akun baru oleh pengguna agar dapat menggunakan sistem ClosetGirls ThriftShop.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -70,13 +75,14 @@ sequenceDiagram
     participant Sistem
     participant DB as Database
 
-    Pengguna->>Reg: Membuka halaman registrasi
+    Pengguna->>Reg: Membuka halaman Registrasi
     Pengguna->>Reg: Mengisi data akun
     Pengguna->>Reg: Menekan tombol Registrasi
     Reg->>Sistem: Mengirim data registrasi
     Sistem->>Sistem: Memvalidasi data
     Sistem->>DB: Memeriksa akun terdaftar
     DB-->>Sistem: Mengirim hasil pemeriksaan
+
     alt Data valid dan akun belum terdaftar
         Sistem->>DB: Menyimpan data akun
         DB-->>Sistem: Konfirmasi penyimpanan
@@ -88,21 +94,23 @@ sequenceDiagram
     end
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pengguna membuka halaman Registrasi.
-2. Pengguna mengisi data sesuai kolom yang tersedia.
+2. Pengguna mengisi data akun.
 3. Sistem memvalidasi data dan memeriksa apakah akun sudah terdaftar.
 4. Jika data valid, sistem menyimpan akun ke database.
 5. Sistem menampilkan hasil registrasi kepada pengguna.
 
-## 5. Sequence Diagram Beranda
+---
 
-### Pengertian
+# 5. Sequence Diagram Beranda
+
+## Pengertian
 
 Sequence Diagram Beranda menggambarkan proses ketika pengguna membuka halaman utama ClosetGirls ThriftShop untuk melihat kategori dan produk yang tersedia.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -119,7 +127,7 @@ sequenceDiagram
     Beranda-->>Pengguna: Menampilkan kategori dan produk
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pengguna membuka halaman Beranda.
 2. Sistem meminta data kategori dan produk dari database.
@@ -127,13 +135,15 @@ sequenceDiagram
 4. Sistem mengirimkan data ke halaman Beranda.
 5. Halaman Beranda menampilkan kategori dan produk kepada pengguna.
 
-## 6. Sequence Diagram Pencarian Produk
+---
 
-### Pengertian
+# 6. Sequence Diagram Pencarian Produk
 
-Sequence Diagram Pencarian Produk menggambarkan proses ketika pengguna mencari produk thrift berdasarkan kata kunci tertentu.
+## Pengertian
 
-### Diagram
+Sequence Diagram Pencarian Produk menggambarkan proses ketika pengguna mencari produk berdasarkan kata kunci tertentu.
+
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -142,7 +152,7 @@ sequenceDiagram
     participant Sistem
     participant DB as Database
 
-    Pembeli->>Search: Membuka fitur pencarian
+    Pembeli->>Search: Membuka fitur Pencarian
     Pembeli->>Search: Memasukkan kata kunci
     Search->>Sistem: Mengirim kata kunci
     Sistem->>DB: Mencari produk yang sesuai
@@ -151,21 +161,23 @@ sequenceDiagram
     Search-->>Pembeli: Menampilkan hasil pencarian
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
-1. Pembeli membuka fitur pencarian produk.
-2. Pembeli memasukkan kata kunci produk.
+1. Pembeli membuka fitur Pencarian Produk.
+2. Pembeli memasukkan kata kunci.
 3. Sistem mencari produk yang sesuai melalui database.
 4. Database mengirimkan hasil pencarian.
-5. Sistem menampilkan daftar produk kepada pembeli.
+5. Sistem menampilkan hasil pencarian kepada pembeli.
 
-## 7. Sequence Diagram Katalog
+---
 
-### Pengertian
+# 7. Sequence Diagram Katalog
 
-Sequence Diagram Katalog menggambarkan proses ketika pembeli membuka katalog untuk melihat daftar produk thrift yang tersedia berdasarkan kategori.
+## Pengertian
 
-### Diagram
+Sequence Diagram Katalog menggambarkan proses ketika pembeli membuka katalog untuk melihat daftar produk yang tersedia.
+
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -183,21 +195,23 @@ sequenceDiagram
     Katalog-->>Pembeli: Menampilkan produk
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli membuka halaman Katalog.
-2. Pembeli memilih kategori produk yang diinginkan.
+2. Pembeli memilih kategori produk.
 3. Sistem mengambil data produk dari database.
-4. Database mengirimkan daftar produk yang sesuai.
-5. Halaman Katalog menampilkan daftar produk kepada pembeli.
+4. Database mengirimkan daftar produk.
+5. Halaman Katalog menampilkan produk kepada pembeli.
 
-## 8. Sequence Diagram Detail Produk
+---
 
-### Pengertian
+# 8. Sequence Diagram Detail Produk
 
-Sequence Diagram Detail Produk menggambarkan proses ketika pembeli memilih salah satu produk untuk melihat informasi lengkapnya.
+## Pengertian
 
-### Diagram
+Sequence Diagram Detail Produk menggambarkan proses ketika pembeli memilih produk untuk melihat informasi lengkap produk tersebut.
+
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -214,15 +228,16 @@ sequenceDiagram
     Katalog-->>Pembeli: Menampilkan detail produk
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli memilih salah satu produk dari katalog.
-2. Sistem meminta informasi produk kepada database.
-3. Database mengirimkan data produk kepada sistem.
-4. Sistem mengirimkan informasi produk ke halaman Detail Produk.
-5. Pembeli melihat informasi produk yang tersedia.
+2. Halaman Katalog meminta detail produk kepada sistem.
+3. Sistem mengambil data produk dari database.
+4. Database mengirimkan data produk.
+5. Sistem mengirimkan informasi produk ke halaman Katalog.
+6. Pembeli melihat detail produk.
 
-### Informasi Produk
+## Informasi Produk
 
 Informasi produk dapat mencakup:
 
@@ -231,58 +246,62 @@ Informasi produk dapat mencakup:
 - Harga
 - Kategori
 - Ukuran
-- Kondisi produk
+- Kondisi
 - Deskripsi
 - Stok
 
-Informasi tersebut disesuaikan dengan rancangan halaman Detail Produk pada Figma.
+---
 
-## 9. Sequence Diagram Keranjang
+# 9. Sequence Diagram Keranjang
 
-### Pengertian
+## Pengertian
 
-Sequence Diagram Keranjang menggambarkan proses ketika pembeli menambahkan produk ke keranjang dan melihat daftar produk yang telah dipilih.
+Sequence Diagram Keranjang menggambarkan proses ketika pembeli menambahkan produk ke keranjang dan melihat produk yang telah dipilih.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
     actor Pembeli
-    participant Produk as Halaman Produk/Keranjang
+    participant Produk as Halaman Produk
+    participant Keranjang as Halaman Keranjang
     participant Sistem
     participant DB as Database
 
     Pembeli->>Produk: Memilih Tambah ke Keranjang
     Produk->>Sistem: Mengirim data produk
-    Sistem->>DB: Memeriksa dan menyimpan data keranjang
-    DB-->>Sistem: Konfirmasi proses
+    Sistem->>DB: Menyimpan data keranjang
+    DB-->>Sistem: Konfirmasi penyimpanan
     Sistem-->>Produk: Mengirim hasil proses
     Produk-->>Pembeli: Menampilkan konfirmasi
 
-    Pembeli->>Produk: Membuka Keranjang
-    Produk->>Sistem: Meminta data keranjang
+    Pembeli->>Keranjang: Membuka Keranjang
+    Keranjang->>Sistem: Meminta data keranjang
     Sistem->>DB: Mengambil data keranjang
     DB-->>Sistem: Mengirim data keranjang
-    Sistem-->>Produk: Mengirim daftar produk
-    Produk-->>Pembeli: Menampilkan isi keranjang
+    Sistem-->>Keranjang: Mengirim daftar produk
+    Keranjang-->>Pembeli: Menampilkan isi keranjang
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli memilih produk yang ingin dimasukkan ke keranjang.
-2. Sistem memeriksa dan memproses data produk.
-3. Data keranjang disimpan sesuai mekanisme penyimpanan sistem.
-4. Sistem menampilkan konfirmasi penambahan produk.
+2. Sistem menerima data produk.
+3. Sistem menyimpan data keranjang.
+4. Sistem memberikan konfirmasi kepada pembeli.
 5. Pembeli membuka halaman Keranjang.
-6. Sistem mengambil dan menampilkan daftar produk dalam keranjang.
+6. Sistem mengambil data keranjang dari database.
+7. Halaman Keranjang menampilkan produk yang telah dipilih.
 
-## 10. Sequence Diagram Checkout
+---
 
-### Pengertian
+# 10. Sequence Diagram Checkout
+
+## Pengertian
 
 Sequence Diagram Checkout menggambarkan proses ketika pembeli melanjutkan produk yang ada di keranjang ke tahap checkout.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -297,6 +316,7 @@ sequenceDiagram
     DB-->>Sistem: Mengirim data produk
     Sistem-->>Checkout: Mengirim ringkasan pesanan
     Checkout-->>Pembeli: Menampilkan ringkasan pesanan
+
     Pembeli->>Checkout: Mengonfirmasi pesanan
     Checkout->>Sistem: Mengirim data pesanan
     Sistem->>DB: Menyimpan data pesanan
@@ -305,7 +325,7 @@ sequenceDiagram
     Checkout-->>Pembeli: Menampilkan hasil checkout
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli membuka halaman Checkout.
 2. Sistem mengambil data produk dari keranjang.
@@ -314,13 +334,15 @@ sequenceDiagram
 5. Sistem menyimpan data pesanan ke database.
 6. Sistem menampilkan hasil checkout kepada pembeli.
 
-## 11. Sequence Diagram Profil
+---
 
-### Pengertian
+# 11. Sequence Diagram Profil
+
+## Pengertian
 
 Sequence Diagram Profil menggambarkan proses ketika pembeli membuka halaman Profil untuk melihat informasi akun.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -337,21 +359,23 @@ sequenceDiagram
     Profil-->>Pembeli: Menampilkan informasi akun
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli membuka halaman Profil.
 2. Halaman Profil meminta data akun kepada sistem.
 3. Sistem mengambil data profil dari database.
-4. Database mengirimkan data akun kepada sistem.
+4. Database mengirimkan data akun.
 5. Halaman Profil menampilkan informasi akun kepada pembeli.
 
-## 12. Sequence Diagram Keluar Akun
+---
 
-### Pengertian
+# 12. Sequence Diagram Keluar Akun
+
+## Pengertian
 
 Sequence Diagram Keluar Akun atau Logout menggambarkan proses ketika pembeli keluar dari akun ClosetGirls ThriftShop.
 
-### Diagram
+## Diagram
 
 ```mermaid
 sequenceDiagram
@@ -366,18 +390,32 @@ sequenceDiagram
     Profil-->>Pembeli: Menampilkan halaman Login
 ```
 
-### Penjelasan Proses
+## Penjelasan Proses
 
 1. Pembeli membuka halaman Profil.
 2. Pembeli memilih menu Logout atau Keluar Akun.
-3. Sistem memproses permintaan keluar akun.
-4. Sistem mengakhiri sesi pengguna apabila mekanisme sesi diterapkan.
-5. Pengguna diarahkan kembali ke halaman Login.
+3. Halaman Profil mengirimkan permintaan Logout kepada sistem.
+4. Sistem memproses keluar akun.
+5. Sistem mengakhiri sesi pengguna.
+6. Pengguna diarahkan kembali ke halaman Login.
 
-## 13. Kesimpulan
+---
 
-Sequence Diagram pada proyek ClosetGirls ThriftShop digunakan untuk menggambarkan urutan interaksi antara pengguna, halaman sistem, proses sistem, dan database pada fitur-fitur utama.
+# 13. Kesimpulan
 
-Dokumentasi ini mencakup proses Login, Registrasi, Beranda, Pencarian Produk, Katalog, Detail Produk, Keranjang, Checkout, Profil, dan Keluar Akun.
+Sequence Diagram pada proyek ClosetGirls ThriftShop digunakan untuk menggambarkan urutan interaksi antara pengguna, halaman sistem, sistem, dan database pada fitur-fitur utama.
 
-Dengan adanya Sequence Diagram, alur kerja setiap fitur diharapkan lebih mudah dipahami dan dapat menjadi acuan dalam proses pengembangan, pengujian, serta perbaikan sistem ClosetGirls ThriftShop.
+Sequence Diagram yang dibuat meliputi:
+
+1. Login
+2. Registrasi
+3. Beranda
+4. Pencarian Produk
+5. Katalog
+6. Detail Produk
+7. Keranjang
+8. Checkout
+9. Profil
+10. Keluar Akun
+
+Dokumentasi ini dapat menjadi acuan dalam proses pengembangan, pengujian, dan perbaikan sistem ClosetGirls ThriftShop.
