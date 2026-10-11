@@ -91,7 +91,7 @@ Tahap ini bertujuan memastikan fitur yang dikembangkan berjalan sesuai kebutuhan
 - [x] Menguji proses checkout.
 - [x] Menguji halaman profil dan logout.
 - [x] Mencatat kesalahan atau bug yang ditemukan.
-- [ ] Mendokumentasikan hasil pengujian.
+- [x] Mendokumentasikan hasil pengujian.
 
 ## 💗 04. REFINEMENT
 
