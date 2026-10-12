@@ -105,23 +105,6 @@ Tahap ini berfokus pada perbaikan berdasarkan hasil pengujian.
 - [ ] Memperbarui dokumentasi sesuai hasil pekerjaan.
 
 ---
-
-## 📂 SPRINT 02 REPOSITORY
-
-```text
-Sprint_2/
-├── README.md
-├── System_Modeling/
-│   ├── Context_Diagram/
-│   │   ├── Context_Diagram.png
-│   │   └── README.md
-│   ├── Use_Case_Diagram/
-│   └── Sequence_Diagram/
-├── Development/
-├── Testing/
-└── Refinement/
-```
-
 ---
 
 <div align="center">
