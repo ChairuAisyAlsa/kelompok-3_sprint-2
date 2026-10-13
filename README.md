@@ -93,18 +93,6 @@ Tahap ini bertujuan memastikan fitur yang dikembangkan berjalan sesuai kebutuhan
 - [x] Mencatat kesalahan atau bug yang ditemukan.
 - [x] Mendokumentasikan hasil pengujian.
 
-## 💗 04. REFINEMENT
-
-Tahap ini berfokus pada perbaikan berdasarkan hasil pengujian.
-
-- [ ] Memperbaiki bug yang ditemukan.
-- [ ] Menyempurnakan tampilan dan navigasi website.
-- [ ] Memperbaiki fungsi yang belum berjalan sesuai kebutuhan.
-- [ ] Memeriksa kembali konsistensi desain dan implementasi.
-- [ ] Melakukan pengujian ulang setelah perbaikan.
-- [ ] Memperbarui dokumentasi sesuai hasil pekerjaan.
-
----
 ---
 
 <div align="center">
