@@ -1,4 +1,3 @@
-/* search.js — pencarian dan filter produk (halaman katalog & hasil pencarian) */
 (function () {
   window.CG = window.CG || {};
   const $ = (id) => document.getElementById(id);
@@ -9,7 +8,6 @@
     { key: 'high', label: 'Harga tertinggi' },
   ];
 
-  /** Filter + urutkan daftar produk. */
   function apply({ q = '', category = 'Semua', sort = 'default', fav = false }) {
     const term = q.trim().toLowerCase();
     const favs = CG.store.get('favorites', []);
