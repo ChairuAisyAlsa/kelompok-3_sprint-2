@@ -1,4 +1,3 @@
-/* cart.js — logika keranjang (tambah, hapus, jumlah) + halaman keranjang & checkout */
 (function () {
   window.CG = window.CG || {};
 
