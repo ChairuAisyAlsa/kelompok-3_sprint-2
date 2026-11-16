@@ -8,7 +8,6 @@
     return `<svg class="icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_PATHS[name] || ''}</svg>`;
   };
 
-  /** Ganti semua elemen [data-icon] dengan SVG. Panggil ulang setelah render dinamis. */
   CG.hydrateIcons = function (root) {
     (root || document).querySelectorAll('[data-icon]').forEach((el) => {
       el.innerHTML = CG.icon(el.dataset.icon, Number(el.dataset.size) || 22);
@@ -23,7 +22,6 @@
     { key: 'profile', href: 'profile.html', icon: 'user', label: 'Profil' },
   ];
 
-  // halaman -> tab yang aktif
   const activeFor = {
     home: 'home', search: 'home', catalog: 'catalog', 'product-detail': 'catalog',
     cart: 'cart', checkout: 'cart', profile: 'profile', logout: 'profile',
