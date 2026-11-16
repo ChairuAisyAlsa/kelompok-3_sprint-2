@@ -1,5 +1,3 @@
-/* auth.js — simulasi login, registrasi, sesi, dan halaman profil.
-   CATATAN: ini hanya simulasi di localStorage. Untuk produksi gunakan backend + hash password. */
 (function () {
   window.CG = window.CG || {};
 
