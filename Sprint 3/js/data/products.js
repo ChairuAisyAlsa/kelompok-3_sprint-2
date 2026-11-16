@@ -1,4 +1,3 @@
-/* data/products.js — data produk (bisa diganti dengan API nanti) */
 window.CG = window.CG || {};
 
 CG.CATEGORIES = ['Semua', 'Atasan', 'Outerwear', 'Hoodie', 'Dress', 'Bawahan'];
