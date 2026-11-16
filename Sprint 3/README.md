@@ -28,7 +28,7 @@ npm test                 # ringkas
 npm run test:report      # tampilan detail per test
 ```
 
-Detail rencana dan hasil pengujian ada di [`TESTING.md`](TESTING.md).
+Detail rencana dan hasil pengujian ada di [`TESTING`](kelompok-3_sprint-2/testing).
 
 ## Struktur proyek
 
