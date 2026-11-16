@@ -13,7 +13,6 @@
 <body>
   <img src="assets/images/logo.svg" alt="ClosetGirls Thrift Store">
   <script>
-    // Halaman awal: masuk ke beranda jika sudah login, jika belum ke login.
     var session = null;
     try { session = localStorage.getItem('cg_session'); } catch (e) {}
     location.replace(session ? 'pages/home.html' : 'pages/login.html');
