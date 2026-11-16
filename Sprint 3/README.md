@@ -28,7 +28,7 @@ npm test                 # ringkas
 npm run test:report      # tampilan detail per test
 ```
 
-Detail rencana dan hasil pengujian ada di [`TESTING`](Testing).
+Detail rencana dan hasil pengujian ada di [`TESTING`](https://github.com/RPLUNIT052026/kelompok-3_sprint-2/tree/8bd38d30aa796f38653770f0fe3861f9c3608980/Testing).
 
 ## Struktur proyek
 
