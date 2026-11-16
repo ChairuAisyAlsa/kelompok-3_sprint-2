@@ -1,4 +1,3 @@
-/* auth.css — halaman login & registrasi */
 .auth {
   position: relative; overflow: hidden; min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
