@@ -6,7 +6,6 @@
   const read = () => CG.store.get('cart', []);
   const write = (cart) => { CG.store.set('cart', cart); CG.Nav.updateBadge(); };
 
-  /** Gabungkan isi keranjang dengan data produk. */
   function detailed() {
     return read()
       .map((it) => ({ p: CG.getProduct(it.id), qty: it.qty }))
@@ -34,7 +33,6 @@
     remove(id) { write(read().filter((it) => it.id !== id)); },
     clear() { write([]); },
 
-    /* ---------- halaman keranjang ---------- */
     initCart() {
       const list = $('cart-list');
       const bar = $('cart-footer');
@@ -83,7 +81,6 @@
       render();
     },
 
-    /* ---------- halaman checkout ---------- */
     initCheckout() {
       const items = detailed();
       if (!items.length) return CG.Nav.go('cart.html');
