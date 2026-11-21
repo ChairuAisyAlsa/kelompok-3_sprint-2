@@ -5,27 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f78bb1">
 <title>Closet Girls Thriftshop</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Caveat:wght@700&family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://googleapis.com" rel="stylesheet">
 <style>
-:root{--bg:#fdeef0;--ink:#5a1228;--accent:#d6336c;--btn:#f78bb1;--butter:#ffc9da;--blush:#f9b4cb;--lilac:#f9d3dd;--mint:#fbe1e6;--card:#fffafb;--line:#f1cdd6;--onacc:#fff}
-@media (prefers-color-scheme:dark){:root{--bg:#2a1420;--ink:#ffe6ef;--accent:#ff8fb8;--btn:#ff8fb8;--butter:#e8a0ba;--blush:#d9709a;--lilac:#e8b3c6;--mint:#f0c4d2;--card:#351b29;--line:#5a3347;--onacc:#2a1420}}
+:root{
+  --bg:#fdeef0;
+  --ink:#5a1228;
+  --accent:#d6336c;
+  --btn:#f78bb1;
+  --butter:#ffc9da;
+  --blush:#f9b4cb;
+  --lilac:#f9d3dd;
+  --mint:#fbe1e6;
+  --card:#fffafb;
+  --line:#f1cdd6;
+  --onacc:#fff;
+}
+
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Nunito,system-ui,sans-serif;overflow-x:hidden;
-  background-image:radial-gradient(var(--line) 1.5px,transparent 1.5px);background-size:26px 26px}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:17px/1.6 Nunito,system-ui,sans-serif;
+  overflow-x:hidden;
+  background-image:radial-gradient(var(--line) 1.5px,transparent 1.5px);
+  background-size:26px 26px;
+}
 h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;margin:0;line-height:1.05}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .hand{font-family:Caveat,cursive;font-weight:700}
 
 /* header */
-header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 5vw;position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:2px solid var(--ink)}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 5vw;position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:2px solid var(--ink)}
 .logo{font:800 1.4rem 'Bricolage Grotesque',sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
 .logo i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--onacc);font-style:normal;transform:rotate(-12deg);font-size:1.1rem}
-.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .bar a.nav{font-weight:800;text-decoration:none}
 .bar a.nav:hover{text-decoration:underline wavy var(--accent)}
+
+/* tombol */
 .btn{display:inline-block;background:var(--btn);color:#5a1228;padding:12px 24px;border-radius:999px;font:800 1rem Nunito,sans-serif;text-decoration:none;border:2px solid var(--ink);cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform .12s,box-shadow .12s}
 .btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
 .btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
@@ -44,882 +65,124 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:12p
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* hero */
-.hero{padding:8vh 5vw 9vh;display:grid;gap:30px;grid-template-columns:1.15fr 1fr;align-items:center;max-width:1180px;margin:0 auto}
-.kicker{display:inline-block;background:var(--mint);color:#5a1228;border:2px solid var(--ink);border-radius:999px;padding:2px 14px;font-weight:800;font-size:.9rem;transform:rotate(-2deg);margin-bottom:14px}
-@media (prefers-color-scheme:dark){.kicker{color:#12261e}}
-.hero h1{font-size:clamp(2.8rem,9vw,5.8rem);font-weight:800;letter-spacing:-.035em}
-.hl{display:inline-block;padding:0 .15em;border-radius:10px;border:2px solid var(--ink);transform:rotate(-2deg);color:#5a1228}
+.hero{padding:7vh 5vw 8vh;display:grid;gap:36px;grid-template-columns:1.15fr 1fr;align-items:center;max-width:1180px;margin:0 auto}
+.kicker{display:inline-block;background:var(--mint);color:#5a1228;border:2px solid var(--ink);border-radius:999px;padding:3px 14px;font-weight:800;font-size:.9rem;transform:rotate(-2deg);margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-.035em}
+.hl{display:inline-block;padding:0 .16em;border-radius:10px;border:2px solid var(--ink);transform:rotate(-2deg);color:#5a1228}
 .hl.a{background:var(--butter)}
 .hl.b{background:var(--blush);transform:rotate(1.5deg)}
-.hero p.lead{max-width:42ch;font-size:1.15rem;margin:22px 0 24px}
+.hero p.lead{max-width:44ch;font-size:1.1rem;margin:22px 0 24px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.drop{margin-top:26px;display:inline-flex;gap:14px;align-items:center;background:var(--card);border:2px dashed var(--ink);border-radius:16px;padding:10px 16px}
-.drop .hand{font-size:1.5rem;line-height:1}
-.clock{display:flex;gap:6px}
-.clock span{background:var(--ink);color:var(--bg);border-radius:8px;padding:4px 8px;font:800 1.05rem 'Bricolage Grotesque',sans-serif;min-width:48px;text-align:center;line-height:1.2}
-.clock small{display:block;font:700 .62rem Nunito,sans-serif;opacity:.8;letter-spacing:.06em}
-.stage{position:relative;height:430px;max-width:440px;width:100%;justify-self:center}
-.fl{position:absolute;background:var(--card);border:2px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 var(--ink);padding:8px 8px 4px;text-align:center;animation:float 5s ease-in-out infinite}
-.fl svg{width:100%;height:auto;stroke:#5a1228;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round;display:block;border-radius:8px}
-.fl em{display:block;font:700 1.15rem Caveat,cursive;font-style:normal;margin-top:2px}
-.fl.f1{width:44%;left:0;top:30px;--r:-7deg}
-.fl.f2{width:46%;right:0;top:0;--r:6deg;animation-delay:-1.6s}
-.fl.f3{width:44%;left:26%;bottom:0;--r:-2deg;animation-delay:-3.2s}
+
+/* kolase */
+.stage{position:relative;height:460px;max-width:460px;width:100%;justify-self:center}
+.fl{position:absolute;background:var(--card);border:2px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 var(--ink);padding:8px 8px 6px;text-align:center;animation:float 5s ease-in-out infinite}
+.fl img{width:100%;height:175px;object-fit:cover;display:block;border-radius:8px;border:1.5px solid var(--ink);background:var(--mint)}
+.fl em{display:block;font:700 1.2rem Caveat,cursive;font-style:normal;margin-top:5px;color:var(--ink);line-height:1.1}
+.fl.f1{width:43%;left:0;top:15px;--r:-7deg;z-index:1}
+.fl.f2{width:44%;right:8px;top:0;--r:6deg;animation-delay:-1.6s;z-index:1}
+.fl.f3{width:43%;left:28%;bottom:0;--r:-2deg;animation-delay:-3.2s;z-index:2}
 @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(calc(var(--r) + 2deg))}}
-.spin{position:absolute;right:-6px;bottom:44px;width:120px;height:120px;z-index:2}
+
+.spin{position:absolute;right:-14px;bottom:10px;width:115px;height:115px;z-index:3;pointer-events:none}
 .spin svg{width:100%;height:100%;animation:rot 14s linear infinite}
-.spin .core{position:absolute;inset:0;display:grid;place-items:center;font-size:2rem}
+.spin .core{position:absolute;inset:0;display:grid;place-items:center;font-size:1.8rem}
 @keyframes rot{to{transform:rotate(360deg)}}
-.spark{position:absolute;color:var(--accent);animation:tw 2.4s ease-in-out infinite}
+
+.spark{position:absolute;color:var(--accent);font-size:1.4rem;animation:tw 2.4s ease-in-out infinite;z-index:3}
 @keyframes tw{50%{transform:scale(.4) rotate(40deg);opacity:.4}}
 
-/* sections */
-section{padding:8vh 5vw;max-width:1180px;margin:0 auto}
-.sh{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+/* katalog produk */
+section{padding:6vh 5vw 10vh;max-width:1180px;margin:0 auto}
+.sh{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
 .sh h2{font-size:clamp(2rem,5vw,2.8rem)}
 .sh .hand{font-size:1.6rem;color:var(--accent);transform:rotate(-3deg)}
-.tools{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:28px}
-.filters{display:flex;gap:10px;flex-wrap:wrap}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
 .filters button{font:800 .95rem Nunito,sans-serif;padding:7px 18px;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;transition:transform .12s}
 .filters button:hover{transform:rotate(-3deg) scale(1.05)}
-.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.sort{display:flex;align-items:center;gap:8px;font-weight:800;font-size:.92rem}
-.sort select{width:auto;padding:7px 10px;border:2px solid var(--ink);border-radius:10px}
+.filters button.active{background:var(--ink);color:var(--bg)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:30px 24px}
-.item{background:var(--card);border:2px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column;position:relative;transition:transform .2s,box-shadow .2s;transform:rotate(var(--tilt,0deg));margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:30px 24px}
+.item{background:var(--card);border:2px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column;position:relative;transition:transform .2s,box-shadow .2s;transform:rotate(var(--tilt,0deg));margin-top:14px;padding-bottom:16px}
 .item:nth-child(3n+1){--tilt:-1.4deg}
 .item:nth-child(3n+2){--tilt:1deg}
 .item:nth-child(3n){--tilt:-.5deg}
 .item:hover{transform:rotate(0) translateY(-6px);box-shadow:9px 11px 0 var(--ink)}
 .item::before{content:"";position:absolute;top:-14px;left:50%;width:66px;height:22px;margin-left:-33px;background:rgba(255,226,122,.85);border:1px dashed rgba(74,31,51,.4);transform:rotate(-3deg);z-index:2}
-.pic{height:300px;margin:14px 14px 0;border:2px solid var(--ink);border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden}
-.pic::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 50% 35%,rgba(255,255,255,.55),transparent 65%);pointer-events:none}
-.pic svg{width:78%;height:92%;stroke:#5a1228;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round;position:relative;z-index:1;transition:transform .3s}
-.item:hover .pic svg{transform:scale(1.06) rotate(-3deg)}
-.badge{position:absolute;left:8px;top:8px;z-index:2;background:var(--butter);color:#5a1228;border:2px solid #5a1228;border-radius:999px;font:800 .72rem Nunito,sans-serif;padding:1px 10px;transform:rotate(-6deg)}
-.fav{position:absolute;right:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;border:2px solid #5a1228;background:#fff;color:#5a1228;font-size:1.2rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .15s}
-.fav:hover{transform:scale(1.15)}
-.fav[aria-pressed="true"]{background:var(--accent);color:#fff;animation:pop .35s}
-@keyframes pop{50%{transform:scale(1.4)}}
-.info{padding:12px 16px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
-.info h3{font-size:1.15rem}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0}
-.chip{font-size:.78rem;font-weight:800;border:1.5px solid var(--ink);border-radius:999px;padding:0 9px}
-.chip.c1{background:var(--lilac);color:#5a1228}
-.chip.c2{background:var(--mint);color:#5a1228}
-.price{font:800 1.5rem 'Bricolage Grotesque',sans-serif;color:var(--accent);margin:2px 0 10px}
-.price s{font:700 .85rem Nunito;opacity:.5;margin-left:6px;color:var(--ink)}
+
+.pic{height:260px;margin:14px 14px 12px;border:2px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--mint)}
+.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.item:hover .pic img{transform:scale(1.06)}
+
+.info{padding:0 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{display:inline-block;width:fit-content;background:var(--butter);border:1.5px solid var(--ink);border-radius:999px;padding:1px 10px;font-size:.78rem;font-weight:800}
+.info h3{font-size:1.25rem;margin-top:2px}
+.price{font-weight:800;color:var(--accent);font-size:1.1rem;margin-bottom:8px}
 .info .btn{margin-top:auto;text-align:center}
-.nores{grid-column:1/-1;text-align:center;padding:30px;font-weight:700;opacity:.8}
 
-/* mix & match */
-.mix{background:var(--lilac);color:#5a1228;border:2px solid var(--ink);border-radius:28px;box-shadow:7px 7px 0 var(--ink);padding:clamp(20px,4vw,40px);max-width:1180px}
-.mixwrap{padding:4vh 5vw}
-.mix h2{font-size:clamp(2rem,5vw,2.8rem)}
-.mix .hand{font-size:1.6rem}
-.mixgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:22px;align-items:stretch}
-.slot{background:var(--card);color:var(--ink);border:2px solid var(--ink);border-radius:16px;padding:12px;text-align:center;display:flex;flex-direction:column;gap:6px}
-.slot .view{height:170px;border-radius:10px;display:grid;place-items:center;border:2px solid var(--ink);transition:background .25s}
-.slot svg{width:70%;height:94%;stroke:#5a1228;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
-.slot b{font:800 1rem 'Bricolage Grotesque',sans-serif;line-height:1.15}
-.slot small{opacity:.8}
-.arrows{display:flex;justify-content:center;gap:10px}
-.arrows button{width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--butter);color:#5a1228;font-size:1.1rem;font-weight:800;cursor:pointer}
-.arrows button:hover{transform:scale(1.12)}
-.mixsum{background:var(--ink);color:var(--bg);border-radius:16px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:10px;text-align:center}
-.mixsum .big{font:800 2.2rem 'Bricolage Grotesque',sans-serif;color:var(--butter)}
-.mixsum .btn{box-shadow:3px 3px 0 var(--bg)}
-.mixsum .btn.ghost{background:transparent;color:var(--bg);border-color:var(--bg)}
+footer{text-align:center;padding:28px 5vw;border-top:2px solid var(--ink);background:var(--card);font-weight:700}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.step{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:22px 20px;position:relative;box-shadow:5px 5px 0 var(--ink)}
-.step:nth-child(1){transform:rotate(-1.2deg);background:var(--butter);color:#5a1228}
-.step:nth-child(2){transform:rotate(.8deg)}
-.step:nth-child(3){transform:rotate(-.6deg);background:var(--mint);color:#5a1228}
-.step .n{position:absolute;top:-18px;left:16px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--onacc);border:2px solid var(--ink);display:grid;place-items:center;font:800 1.2rem 'Bricolage Grotesque'}
-.step h3{font-size:1.3rem;margin:10px 0 4px}
-.step p{margin:0}
-
-/* why */
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.why div{border:2px dashed var(--ink);border-radius:16px;padding:16px;text-align:center}
-.why .ic{font-size:2rem;display:block}
-.why b{font:800 1.1rem 'Bricolage Grotesque'}
-
-details{border:2px solid var(--ink);border-radius:14px;background:var(--card);padding:12px 18px;margin-bottom:12px}
-details[open]{box-shadow:4px 4px 0 var(--accent)}
-summary{cursor:pointer;font-weight:800}
-details p{margin:8px 0 0}
-footer{padding:44px 5vw;border-top:2px solid var(--ink);text-align:center;background:var(--butter);color:#5a1228}
-footer .hand{font-size:2rem;display:block}
-
-/* toast & confetti */
-#toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:999px;font-weight:800;z-index:30;transition:transform .3s;max-width:90vw;text-align:center}
-#toast.show{transform:translate(-50%,0)}
-.cf{position:fixed;z-index:40;pointer-events:none;font-size:18px;line-height:1}
-
-/* keranjang */
-.scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .2s;z-index:10}
-.scrim.open{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(410px,100%);background:var(--card);border-left:2px solid var(--ink);z-index:11;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
-.drawer.open{transform:none}
-.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:2px solid var(--ink)}
-.drawer h2{font-size:1.5rem;margin:0}
-.lines{flex:1;overflow:auto;padding:0 20px}
-.line{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--ink)}
-.line .mini{width:56px;height:56px;border-radius:10px;border:2px solid var(--ink);display:grid;place-items:center;flex:none}
-.line .mini svg{width:90%;height:90%;stroke:#5a1228;stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}
-.line div.t{flex:1;min-width:0}
-.line b{display:block;line-height:1.2}
-.line small{opacity:.75}
-.linkbtn{background:none;border:0;color:var(--accent);font:800 .9rem Nunito,sans-serif;cursor:pointer;text-decoration:underline}
-.sum{padding:16px 20px;border-top:2px solid var(--ink)}
-.sum .total{display:flex;justify-content:space-between;font-weight:800;font-size:1.25rem;margin-bottom:8px}
-.empty{padding:30px 0;text-align:center;opacity:.8}
-.empty .hand{font-size:1.6rem;display:block}
-
-/* keranjang cantik */
-.drawer{background-image:radial-gradient(var(--line) 1.2px,transparent 1.2px);background-size:20px 20px}
-.drawer header{background:#f78bb1;color:#5a1228}
-.drawer header .ttl{display:flex;align-items:center;gap:10px}
-.drawer header svg{width:46px;height:23px;fill:none;stroke:#5a1228;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transform-origin:50% 0;animation:swing 3s ease-in-out infinite}
-.drawer header small{display:block;font:700 1.15rem/1 Caveat,cursive}
-.drawer header .linkbtn{color:#5a1228}
-@keyframes swing{50%{transform:rotate(7deg)}}
-.lines{padding:18px;display:grid;gap:14px;align-content:start}
-.line{position:relative;background:var(--card);border:2px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink);padding:10px;gap:12px;animation:drop .35s}
-.line:nth-child(odd){transform:rotate(-.7deg)}
-.line:nth-child(even){transform:rotate(.6deg)}
-.line .mini{width:62px;height:62px}
-.line .price2{display:block;font:800 1.05rem 'Bricolage Grotesque',sans-serif;color:var(--accent)}
-.line .rm{width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:800 1.1rem/1 Nunito,sans-serif;cursor:pointer;flex:none}
-.line .rm:hover{background:var(--accent);color:var(--onacc)}
-@keyframes drop{from{opacity:0;transform:translateY(-12px)}}
-.empty{display:grid;justify-items:center;gap:6px;padding:26px 0}
-.empty svg{width:120px;height:60px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transform-origin:50% 0;animation:swing 3s ease-in-out infinite}
-.empty p{margin:0 0 6px}
-.sum{padding:0 18px 18px;border-top:0;background:transparent}
-.receipt{background:#fffdf3;color:#5a1228;border:2px dashed #5a1228;border-radius:8px;padding:14px 16px 12px;margin-top:12px;font:700 .92rem/1.7 'Courier New',monospace}
-.receipt .rhead{text-align:center;font-weight:800;letter-spacing:.12em;border-bottom:2px dashed #5a1228;padding-bottom:6px;margin-bottom:6px}
-.rrow{display:flex;justify-content:space-between;gap:8px}
-.rrow.tot{border-top:2px dashed #5a1228;margin-top:6px;padding-top:6px;font-size:1.1rem;font-weight:800}
-.rsmall{font-size:.78rem;opacity:.75}
-.barcode{height:24px;margin:10px 0 2px;background:repeating-linear-gradient(90deg,#5a1228 0 2px,transparent 2px 4px,#5a1228 4px 5px,transparent 5px 8px,#5a1228 8px 11px,transparent 11px 13px)}
-.rthx{text-align:center;font-size:.75rem;letter-spacing:.08em}
-.cartquote{text-align:center;font-size:1.35rem;line-height:1.15;color:var(--accent);margin:12px 6px 6px}
-.sum .note{text-align:center;margin-bottom:12px}
-
-/* kata-kata thrift & kamus */
-.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
-.note2{position:relative;margin:0;border:2px solid var(--ink);border-radius:6px 6px 22px 6px;padding:34px 20px 20px;box-shadow:5px 5px 0 var(--ink);color:#5a1228;font:700 1.5rem/1.2 Caveat,cursive;transform:rotate(var(--r,0deg));transition:transform .2s}
-.note2:hover{transform:rotate(0) translateY(-4px)}
-.note2::before{content:"\201C";position:absolute;top:2px;left:14px;font:800 3.4rem/1 'Bricolage Grotesque',sans-serif;color:var(--accent)}
-.note2::after{content:"";position:absolute;top:-11px;right:22px;width:48px;height:18px;background:rgba(255,255,255,.65);border:1px dashed rgba(74,31,51,.35);transform:rotate(5deg)}
-.dict{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.dict div{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:16px 18px;transition:transform .2s,box-shadow .2s}
-.dict div:hover{transform:rotate(-1deg) translateY(-3px);box-shadow:4px 4px 0 var(--accent)}
-.dict b{display:block;font:800 1.3rem 'Bricolage Grotesque',sans-serif;color:var(--accent)}
-.dict p{margin:2px 0 0}
-
-/* dialog */
-dialog{background:var(--card);color:var(--ink);border:2px solid var(--ink);border-radius:20px;padding:26px;width:min(440px,92vw);box-shadow:8px 8px 0 var(--ink)}
-dialog::backdrop{background:rgba(0,0,0,.5)}
-dialog h2{font-size:1.6rem;margin-bottom:6px}
-.tabs{display:flex;gap:8px;margin:14px 0}
-.tabs button{flex:1;padding:8px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:800 .95rem Nunito,sans-serif;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
-form{display:grid;gap:12px}
-label{display:grid;gap:4px;font-weight:800;font-size:.95rem}
-input,textarea,select{font:inherit;padding:11px;border:2px solid var(--ink);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
-.err{color:#c0182f;font-weight:800;min-height:1.2em;margin:0;font-size:.92rem}
-@media (prefers-color-scheme:dark){.err{color:#ff8a9b}}
-.note{font-size:.88rem;opacity:.75;margin:0}
-.row{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
-.ordersum{background:var(--bg);border:2px dashed var(--ink);border-radius:12px;padding:12px 14px;font-size:.95rem}
-.ordersum div{display:flex;justify-content:space-between;gap:10px}
-
-@media (max-width:860px){.hero{grid-template-columns:1fr}.stage{height:380px}.mixgrid{grid-template-columns:1fr 1fr}.mixsum{grid-column:1/-1}}
-@media (max-width:480px){.mixgrid{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.track{animation:none}}
-
-/* login ala desain: awan pink + logo hanger */
-#authDlg{position:relative;overflow:hidden;padding:78px 26px 72px;border-radius:26px}
-#authDlg .cl{position:absolute;left:0;width:100%;height:80px;pointer-events:none}
-#authDlg .cl.t{top:0}#authDlg .cl.b{bottom:0}
-#authDlg>*:not(.cl){position:relative;z-index:1}
-.alogo{display:grid;justify-items:center;margin-bottom:4px;color:var(--ink)}
-.alogo svg{width:64px}
-.alogo span{font-family:Pacifico,cursive;font-size:1.7rem;color:var(--accent);line-height:1.1}
-.alogo small{font-weight:800;letter-spacing:.3em;font-size:.58rem}
-#authDlg h2{text-align:center;font-size:1.3rem}
-#authDlg .note{text-align:center;font-weight:800;color:var(--accent);opacity:1}
-#authDlg input{border-radius:12px;background:#fff;color:#5a1228}
-@media (prefers-color-scheme:dark){#authDlg input{background:var(--bg);color:var(--ink)}}
-
-/* foto produk */
-.slot .view{overflow:hidden}
-.line .mini{overflow:hidden}
-.fl svg.ph{border-radius:8px}
-
-/* tentang & cara pesan */
-.about{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
-.about .big{font-size:clamp(1.8rem,4.5vw,2.7rem);margin-bottom:16px}
-.about p{margin:0 0 14px;max-width:58ch}
-.about .sign{font-size:1.8rem;color:var(--accent);transform:rotate(-2deg);margin-top:6px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:20px}
-.stats div{background:var(--butter);color:#5a1228;border:2px solid var(--ink);border-radius:14px;padding:10px 12px;box-shadow:3px 3px 0 var(--ink)}
-.stats div:nth-child(2){background:var(--mint)}.stats div:nth-child(3){background:var(--lilac)}.stats div:nth-child(4){background:var(--blush)}
-.stats b{display:block;font:800 1.4rem 'Bricolage Grotesque',sans-serif;line-height:1.1}
-.stats span{font-size:.85rem;line-height:1.2;display:block}
-.polas{position:relative;aspect-ratio:1/1;width:100%;max-width:520px;margin:0 auto}
-.pola{position:absolute;width:48%;margin:0;background:#fff;padding:8px 8px 32px;border:2px solid var(--ink);border-radius:6px;box-shadow:5px 5px 0 var(--ink);transition:transform .25s}
-.pola em{position:absolute;left:0;right:0;bottom:5px;text-align:center;font:700 1.15rem Caveat,cursive;font-style:normal;color:#5a1228}
-.pola.a{left:0;top:2%;transform:rotate(-6deg)}
-.pola.b{right:0;top:0;transform:rotate(5deg)}
-.pola.c{left:25%;bottom:0;transform:rotate(-1.5deg);z-index:2}
-.pola:hover{transform:rotate(0) scale(1.04);z-index:3}
-.pola.a em{text-align:left;padding-left:10px}
-.pola.b em{text-align:right;padding-right:10px}
-.ph{display:block}
-.pic svg.ph,.slot svg.ph,.line .mini svg.ph{width:100%;height:100%}
-.fl svg.ph{width:100%;height:auto;aspect-ratio:3/4}
-.item:hover .pic svg.ph{transform:scale(1.06)}
-.pola svg.ph{width:100%;aspect-ratio:3/4}
-.lead2{margin:-8px 0 30px;max-width:60ch;font-size:1.1rem}
-.step:nth-child(4){transform:rotate(.7deg);background:var(--lilac);color:#5a1228}
-.step:nth-child(5){transform:rotate(-1deg);background:var(--blush);color:#5a1228}
-@media (min-width:1000px){.steps.five{grid-template-columns:repeat(5,1fr);gap:20px}.steps.five .step h3{font-size:1.15rem}.steps.five .step p{font-size:.95rem}}
-.tipbox{margin-top:34px;border:2px dashed var(--ink);border-radius:18px;padding:20px 22px;background:var(--card)}
-.tipbox p{margin:0 0 12px}
-.tipbox .hand{font-size:1.5rem;color:var(--accent)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
-.chips span{border:2px solid var(--ink);border-radius:999px;padding:4px 14px;font-weight:800;font-size:.92rem;background:var(--butter);color:#5a1228}
-.tipbox .cta{display:flex;flex-wrap:wrap;gap:12px}
-@media (max-width:640px){.bar a.nav[href="#mix"],.bar a.nav[href="#tentang"]{display:none}}
-@media (max-width:760px){.about{grid-template-columns:1fr;gap:30px}}
+@media (max-width: 860px){
+  .hero{grid-template-columns:1fr;text-align:left}
+  .stage{height:410px;max-width:390px;margin-top:10px}
+}
 </style>
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="#"><i aria-hidden="true">&#9825;</i>Closet Girls</a>
-  <div class="bar">
-    <a class="nav" href="#koleksi">Koleksi</a>
-    <a class="nav" href="#mix">Mix &amp; Match</a>
-    <a class="nav" href="#tentang">Tentang</a>
-    <a class="nav" href="#cara-beli">Cara pesan</a>
-    <span id="userbox"></span>
-    <button class="btn small" id="openCart" type="button">Keranjang<span class="count" id="count">0</span></button>
-  </div>
-</header>
 
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-
-<main>
-  <div class="hero">
-    <div>
-      <span class="kicker">&#10047; thrift pilihan untuk cewek</span>
-      <h1>Baju bekas, <span class="hl a">gaya</span> <span class="hl b">baru!</span></h1>
-      <p class="lead">Preloved pilihan untuk cewek: kemeja bordir, dress floral, rok renda, cardigan rajut, dan banyak lagi. Dicek satu-satu, dicuci, disetrika, dan cuma ada satu di dunia. Gayamu? Dijamin nggak kembaran.</p>
-      <div class="cta">
-        <a class="btn" href="#koleksi">Lihat koleksi &darr;</a>
-        <a class="btn ghost" href="#mix">Coba Mix &amp; Match</a>
-      </div>
-      <div class="drop" role="timer" aria-label="Hitung mundur stok baru">
-        <span class="hand">Stok baru<br>Jumat 18.00</span>
-        <div class="clock" id="clock"></div>
-      </div>
-    </div>
-    <div class="stage" aria-hidden="true">
-      <div class="fl f1"><div id="h1"></div><em>mulai Rp25rb</em></div>
-      <div class="fl f2"><div id="h2"></div><em>1 of 1 &#10084;</em></div>
-      <div class="fl f3"><div id="h3"></div><em>cek, cuci, siap pakai</em></div>
-      <div class="spin">
-        <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
-          <circle cx="60" cy="60" r="58" fill="#f78bb1" stroke="#5a1228" stroke-width="2"/>
-          <text font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="13" fill="#5a1228" letter-spacing="2"><textPath href="#circ">PRELOVED &#8226; PRELOVED &#8226; PRELOVED &#8226;</textPath></text></svg>
-        <div class="core">&#128717;</div>
-      </div>
-      <span class="spark" style="left:46%;top:-6px;font-size:26px">&#10022;</span>
-      <span class="spark" style="left:-6px;bottom:90px;font-size:20px;animation-delay:-1s">&#10022;</span>
-      <span class="spark" style="right:30%;bottom:-8px;font-size:24px;animation-delay:-1.8s">&#10047;</span>
-    </div>
-  </div>
-
-  <section id="koleksi">
-    <div class="sh"><h2>Koleksi terbaru</h2><span class="hand">pilih favoritmu!</span></div>
-    <div class="tools">
-      <div class="filters" role="group" aria-label="Filter kategori">
-        <button aria-pressed="true" data-f="semua">Semua</button>
-        <button aria-pressed="false" data-f="atasan">Atasan</button>
-        <button aria-pressed="false" data-f="bawahan">Bawahan</button>
-        <button aria-pressed="false" data-f="dress">Dress</button>
-        <button aria-pressed="false" data-f="jaket">Outer</button>
-        <button aria-pressed="false" data-f="fav">&#9829; Favorit</button>
-      </div>
-      <label class="sort">Urutkan
-        <select id="sort"><option value="baru">Terbaru</option><option value="murah">Termurah</option><option value="mahal">Termahal</option></select>
-      </label>
-    </div>
-    <div class="grid" id="grid"></div>
-  </section>
-
-  <div class="mixwrap" id="mix">
-    <div class="mix">
-      <div class="sh" style="margin-bottom:0"><h2>Mix &amp; Match</h2><span class="hand">padukan outfit-mu</span></div>
-      <p style="margin:6px 0 0;max-width:56ch">Geser atasan dan bawahan sampai cocok, atau tekan Acak. Kalau sudah suka, masukkan dua-duanya sekaligus ke keranjang.</p>
-      <div class="mixgrid">
-        <div class="slot" id="slotTop"></div>
-        <div class="slot" id="slotBot"></div>
-        <div class="mixsum">
-          <span>Total outfit</span>
-          <div class="big" id="mixTotal">Rp0</div>
-          <button class="btn" id="mixAdd" type="button">Masukkan outfit</button>
-          <button class="btn ghost small" id="mixShuffle" type="button">&#127922; Acak</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section id="tentang">
-    <div class="sh"><h2>Tentang Closet Girls</h2><span class="hand">kenalan yuk!</span></div>
-    <div class="about">
-      <div class="atext">
-        <h3 class="big">Lemari impianmu, tanpa bikin dompet menangis.</h3>
-        <p>Closet Girls lahir dari hobi yang sederhana: <b>berburu baju lucu</b>. Kami suka kemeja bordir yang manis, dress floral yang jatuh cantik, rok renda yang bikin senyum sendiri, dan cardigan rajut yang hangat di pelukan. Tapi kami juga capek lihat harga yang bikin dompet menjerit.</p>
-        <p>Jadi kami buka thrift shop ini. Setiap potong kami pilih sendiri, kami cek jahitan, kancing, resleting, sampai noda terkecil. Yang lolos baru <b>dicuci, disetrika, difoto apa adanya</b>, lalu masuk etalase. Yang tidak lolos? Tidak kami jual. Titik.</p>
-        <p>Karena tiap barang <b>cuma ada satu</b>, kamu tidak akan ketemu orang lain dengan baju yang sama di acara yang sama. Baju yang pernah disayang, sekarang tinggal menunggu pemilik barunya. Mungkin kamu?</p>
-        <p class="sign hand">Dari kami yang jatuh cinta sama thrift, Closet Girls &#9825;</p>
-        <div class="stats">
-          <div><b>1 of 1</b><span>satu barang, satu pemilik</span></div>
-          <div><b>100%</b><span>dicek &amp; dicuci bersih</span></div>
-          <div><b>Rp25rb</b><span>harga mulai dari</span></div>
-          <div><b>Jumat</b><span>stok baru tiap minggu</span></div>
-        </div>
-      </div>
-      <div class="polas" aria-hidden="true">
-        <figure class="pola a"><span id="abA"></span><em>dress floral &#10047;</em></figure>
-        <figure class="pola b"><span id="abB"></span><em>cardigan pita &#9825;</em></figure>
-        <figure class="pola c"><span id="abC"></span><em>rok renda &#10022;</em></figure>
-      </div>
-    </div>
-    <div class="sh" style="margin-top:44px"><h3 style="font-size:1.6rem">Janji Closet Girls</h3><span class="hand">biar kamu belanja tenang</span></div>
-    <div class="why">
-      <div><span class="ic">&#128269;</span><b>Dicek satu-satu</b><br>Jahitan, kancing, dan resleting kami periksa sebelum tayang.</div>
-      <div><span class="ic">&#129532;</span><b>Bersih &amp; wangi</b><br>Semua dicuci dan disetrika. Terima, langsung pakai.</div>
-      <div><span class="ic">&#128247;</span><b>Foto apa adanya</b><br>Tanpa filter menipu. Kalau ada minus, kami bilang jujur.</div>
-      <div><span class="ic">&#128155;</span><b>Ramah dompet</b><br>Gaya kece tidak harus mahal. Mulai dari Rp25.000.</div>
-    </div>
-  </section>
-
-  <section id="kata">
-    <div class="sh"><h2>Kata-kata thrift</h2><span class="hand">biar makin semangat</span></div>
-    <div class="notes" id="notes"></div>
-  </section>
-
-  <section id="kamus">
-    <div class="sh"><h2>Kamus thrift</h2><span class="hand">istilah yang sering muncul</span></div>
-    <div class="dict" id="dict"></div>
-  </section>
-
-  <section id="kenapa">
-    <div class="sh"><h2>Kenapa thrift?</h2><span class="hand">hemat &amp; keren</span></div>
-    <div class="why">
-      <div><span class="ic">&#128176;</span><b>Hemat</b><br>Mulai dari Rp25.000.</div>
-      <div><span class="ic">&#129412;</span><b>Unik</b><br>Satu barang, satu pemilik.</div>
-      <div><span class="ic">&#127807;</span><b>Ramah bumi</b><br>Baju dipakai lagi, bukan dibuang.</div>
-      <div><span class="ic">&#129532;</span><b>Bersih</b><br>Dicuci dan disetrika dulu.</div>
-    </div>
-  </section>
-
-  <section id="cara-beli">
-    <div class="sh"><h2>Cara pesan</h2><span class="hand">gampang banget, 5 langkah!</span></div>
-    <p class="lead2">Belanja di Closet Girls semudah scroll, klik, dan chat. Tidak perlu ribet, tidak perlu antre.</p>
-    <div class="steps five">
-      <div class="step"><span class="n">1</span><h3>Pilih favoritmu</h3><p>Jelajahi koleksi, pakai filter kategori, atau coba Mix &amp; Match. Suka? Tekan <b>Tambah ke keranjang</b>.</p></div>
-      <div class="step"><span class="n">2</span><h3>Cek keranjang</h3><p>Pastikan barang dan ukurannya sudah pas. Subtotal langsung muncul di struk belanja.</p></div>
-      <div class="step"><span class="n">3</span><h3>Masuk &amp; checkout</h3><p>Daftar atau masuk dengan email, lalu isi nama, nomor WhatsApp, alamat lengkap, dan cara bayar.</p></div>
-      <div class="step"><span class="n">4</span><h3>Konfirmasi via WhatsApp</h3><p>Pesananmu langsung terkirim ke admin. Kami hitung ongkir lalu kirim total dan detail pembayaran.</p></div>
-      <div class="step"><span class="n">5</span><h3>Bayar &amp; tunggu paket</h3><p>Pembayaran masuk, kami kemas rapi dan kirim. Tinggal tunggu paketnya, lalu pamer OOTD-mu!</p></div>
-    </div>
-    <div class="tipbox">
-      <p><span class="hand">Tips jitu:</span> Karena tiap barang cuma ada satu, yang cantik biasanya cepat habis. Siapkan keranjangmu sebelum <b>drop stok Jumat 18.00</b>, dan selesaikan checkout secepatnya.</p>
-      <div class="chips"><span>&#127974; Transfer bank</span><span>&#128241; E-wallet (DANA/OVO/GoPay)</span><span>&#128230; COD</span></div>
-      <div class="cta">
-        <a class="btn" href="#koleksi">Mulai belanja &rarr;</a>
-        <a class="btn ghost" id="askWa" target="_blank" rel="noopener" href="#">Tanya admin di WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="sh"><h2>Pertanyaan umum</h2></div>
-    <details><summary>Apakah barangnya sudah dicuci?</summary><p>Sudah. Semua barang dicek, dicuci, dan disetrika sebelum dijual, jadi bisa langsung kamu pakai.</p></details>
-    <details><summary>Kenapa tiap barang cuma ada satu?</summary><p>Karena ini thrift: tiap barang unik. Kalau sudah terjual, tidak ada stok ulang. Itu yang bikin gayamu beda dari yang lain.</p></details>
-    <details><summary>Bagaimana kalau ada minus di barangnya?</summary><p>Kami selalu jujur. Kalau ada minus (misalnya noda kecil atau benang tertarik), kami sampaikan. Mau lihat foto atau detail tambahan? Tanya admin lewat WhatsApp.</p></details>
-    <details><summary>Cara bayarnya bagaimana?</summary><p>Ada tiga pilihan: transfer bank, e-wallet (DANA/OVO/GoPay), atau COD. Detail pembayaran dikirim admin lewat WhatsApp setelah pesananmu masuk.</p></details>
-    <details><summary>Ongkirnya berapa?</summary><p>Ongkir dihitung admin sesuai alamatmu setelah pesanan masuk, lalu diinfokan bersama total pembayaran. Jadi tidak ada biaya tersembunyi.</p></details>
-    <details><summary>Bisa tukar kalau tidak muat?</summary><p>Bisa, maksimal 2 hari setelah barang diterima. Ongkir tukar ditanggung pembeli.</p></details>
-    <details><summary>Kapan stok baru masuk?</summary><p>Tiap Jumat pukul 18.00. Ikuti Instagram @closetgirls supaya tidak ketinggalan.</p></details>
-  </section>
-</main>
-
-<footer><span class="hand">Closet Girls &#9825; thrift, pakai, sayang.</span>&copy; 2026 Closet Girls Thriftshop. Instagram: @closetgirls</footer>
-
-<div id="toast" role="status" aria-live="polite"></div>
-
-<!-- keranjang -->
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Keranjang belanja" aria-hidden="true">
-  <header>
-    <div class="ttl">
-      <svg viewBox="10 4 80 40" aria-hidden="true"><path d="M50 20 V15 C50 10 55 8 57 11 C59 14 55 16 53 15"/><path d="M50 20 L20 36 Q18 38 21 38 H79 Q82 38 80 36 Z"/></svg>
-      <div><h2>Keranjang</h2><small class="hand" id="cartSub">kosong dulu</small></div>
-    </div>
-    <button class="linkbtn" id="closeCart" type="button">Tutup</button>
+  <!-- Header -->
+  <header class="top">
+    <a href="#" class="logo"><i>✿</i> Closet Girls</a>
+    <nav class="bar">
+      <a href="#katalog" class="nav">Koleksi</a>
+      <a href="#tentang" class="nav">Cara Order</a>
+      <button class="btn small" id="cartBtn">Keranjang <span class="count" id="cartCount">0</span></button>
+    </nav>
   </header>
-  <div class="lines" id="lines"></div>
-  <div class="sum">
-    <div class="receipt">
-      <div class="rhead">STRUK THRIFT &#9825;</div>
-      <div class="rrow"><span>Barang</span><span id="rCount">0 pcs</span></div>
-      <div class="rrow"><span>Subtotal</span><span id="subtotal">Rp0</span></div>
-      <div class="rrow"><span>Ongkir</span><span>dihitung admin</span></div>
-      <div class="rrow tot"><span>TOTAL*</span><span id="rTotal">Rp0</span></div>
-      <div class="rsmall">*belum termasuk ongkir</div>
-      <div class="barcode" aria-hidden="true"></div>
-      <div class="rthx">TERIMA KASIH SUDAH THRIFT</div>
+
+  <!-- Teks Berjalan (Marquee) -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>✿ DICUCI BERSIH</span>
+      <span>✿ <b>SATU BAJU, SATU CERITA</b></span>
+      <span>✿ MULAI RP25.000</span>
+      <span>✿ <b>THRIFT PILIHAN</b></span>
+      <span>✿ BAJU LAMA, CERITA BARU</span>
+      <span>✿ <b>PRELOVED 1 OF 1</b></span>
+      <span>✿ DICUCI BERSIH</span>
+      <span>✿ <b>SATU BAJU, SATU CERITA</b></span>
+      <span>✿ MULAI RP25.000</span>
+      <span>✿ <b>THRIFT PILIHAN</b></span>
+      <span>✿ BAJU LAMA, CERITA BARU</span>
+      <span>✿ <b>PRELOVED 1 OF 1</b></span>
     </div>
-    <p class="cartquote hand" id="cartQuote"></p>
-    <p class="note">Barang di keranjang belum dikunci. Karena cuma ada satu, lebih cepat lebih aman.</p>
-    <button class="btn" id="checkoutBtn" type="button" style="width:100%">Checkout</button>
   </div>
-</aside>
 
-<!-- masuk / daftar -->
-<dialog id="authDlg" aria-labelledby="authTitle">
-  <svg class="cl t" viewBox="0 0 400 80" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><g fill="#f78bb1"><circle cx="0" cy="0" r="72"/><circle cx="105" cy="-10" r="44"/><circle cx="200" cy="-18" r="54"/><circle cx="300" cy="-8" r="42"/><circle cx="400" cy="2" r="66"/></g></svg>
-  <svg class="cl b" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#f78bb1"><circle cx="0" cy="80" r="64"/><circle cx="105" cy="92" r="42"/><circle cx="205" cy="90" r="52"/><circle cx="305" cy="96" r="38"/><circle cx="400" cy="82" r="66"/></g></svg>
-  <div class="alogo"><svg viewBox="0 0 120 84" aria-hidden="true"><path d="M60 28 V20 C60 10 72 8 74 16 C75 22 68 24 64 22" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M60 28 L10 66 Q4 72 12 72 H108 Q116 72 110 66 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/><path d="M60 64 C46 54 50 42 60 48 C70 42 74 54 60 64Z" fill="#f78bb1"/></svg><span>ClosetGirls</span><small>THRIFT SHOP</small></div>
-  <h2 id="authTitle">Masuk</h2>
-  <p class="note" id="authNote"></p>
-  <div class="tabs" role="tablist">
-    <button type="button" role="tab" id="tabLogin" aria-selected="true">Masuk</button>
-    <button type="button" role="tab" id="tabReg" aria-selected="false">Daftar</button>
-  </div>
-  <form id="authForm" novalidate>
-    <label id="nameWrap" hidden>Nama<input id="aName" autocomplete="name"></label>
-    <label>Email<input id="aEmail" type="email" autocomplete="email" required placeholder="nama@email.com"></label>
-    <label>Kata sandi<input id="aPass" type="password" autocomplete="current-password" required minlength="6" placeholder="Minimal 6 karakter"></label>
-    <p class="err" id="authErr" role="alert"></p>
-    <div class="row"><button class="btn ghost" type="button" id="authCancel">Batal</button><button class="btn" id="authSubmit" type="submit">Masuk</button></div>
-  </form>
-</dialog>
+  <!-- Hero & Kolase -->
+  <main>
+    <div class="hero">
+      <div>
+        <span class="kicker">✿ thrift pilihan untuk cewek</span>
+        <h1>Baju bekas, <br><span class="hl a">gaya</span> <span class="hl b">baru!</span></h1>
+        <p class="lead">Preloved pilihan untuk cewek: kemeja bordir, dress floral, rok renda, cardigan rajut, dan banyak lagi. Dicek satu-satu, dicuci, disetrika, dan cuma ada satu di dunia. Gayamu? Dijamin nggak kembaran.</p>
+        <div class="cta">
+          <a href="#katalog" class="btn">Lihat Koleksi ✿</a>
+          <a href="#tentang" class="btn ghost">Tentang Kami</a>
+        </div>
+      </div>
 
-<!-- checkout -->
-<dialog id="coDlg" aria-labelledby="coTitle">
-  <h2 id="coTitle">Checkout</h2>
-  <form id="coForm" novalidate>
-    <div class="ordersum" id="coSum"></div>
-    <label>Nama penerima<input id="cName" required autocomplete="name"></label>
-    <label>Nomor WhatsApp<input id="cPhone" type="tel" required autocomplete="tel" placeholder="08xxxxxxxxxx"></label>
-    <label>Alamat lengkap<textarea id="cAddr" rows="3" required autocomplete="street-address"></textarea></label>
-    <label>Cara bayar
-      <select id="cPay"><option>Transfer bank</option><option>E-wallet (DANA/OVO/GoPay)</option><option>COD (bayar di tempat)</option></select>
-    </label>
-    <p class="err" id="coErr" role="alert"></p>
-    <div class="row"><button class="btn ghost" type="button" id="coCancel">Kembali</button><button class="btn" type="submit">Kirim pesanan</button></div>
-  </form>
-</dialog>
+      <!-- Area Kolase -->
+      <div class="stage">
+        <!-- Ganti src dengan path foto baju Anda -->
+        <div class="fl f1">
+          <img src="https://unsplash.com" alt="Outfit Thrift 1">
+          <em>mulai Rp25.000</em>
+        </div>
 
-<!-- sukses -->
-<dialog id="okDlg" aria-labelledby="okTitle">
-  <h2 id="okTitle">Pesanan terkirim &#127881;</h2>
-  <p>Nomor pesanan: <b id="okId"></b></p>
-  <p>Lanjutkan konfirmasi di WhatsApp. Admin akan membalas dengan total ongkir dan detail pembayaran. Jika WhatsApp tidak terbuka, tekan tombol di bawah.</p>
-  <div class="row"><a class="btn" id="okWa" target="_blank" rel="noopener" href="#">Buka WhatsApp</a><button class="btn ghost" type="button" id="okClose">Selesai</button></div>
-</dialog>
+        <div class="fl f2">
+          <img src="https://unsplash.com" alt="Outfit Thrift 2">
+          <em>1 of 1 ♥</em>
+        </div>
 
-<script>
-/* ====== PENGATURAN: ganti nomor WhatsApp admin (format 62, tanpa 0 di depan) ====== */
-const WA_ADMIN = '6281234567890';
-/* Jam stok baru tiap Jumat (0-23, waktu perangkat pembeli) */
-const DROP_HOUR = 18;
-
-/* ====== gantungan baju untuk keranjang kosong ====== */
-const HANGER = '<path d="M50 20 V15 C50 10 55 8 57 11 C59 14 55 16 53 15" fill="none"/><path d="M50 20 L20 36 Q18 38 21 38 H79 Q82 38 80 36 Z" fill="none"/>';
-
-/* FOTO PRODUK: upload foto kolase ke repo dengan nama kolase.jpg (satu file saja) */
-const KOLASE = 'kolase.jpg';
-const CROP = { /* [x, y, lebar, tinggi] bagian foto kolase */
-  cardigan:[0,37,400,526], rok:[402,32,396,533], hoodie:[802,34,396,531],
-  kemeja:[0,632,400,533], jeans:[432,600,336,565], dress:[808,612,382,578]
-};
-const crop = (k,label) => `<svg class="ph" viewBox="${CROP[k].join(' ')}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label||''}"><image href="${KOLASE}" width="1200" height="1200"/></svg>`;
-/* foto polaroid di bagian Tentang + tombol WhatsApp di Cara pesan */
-(function(){
-  [['abA','dress'],['abB','cardigan'],['abC','rok']].forEach(function(x){var e=document.getElementById(x[0]);if(e)e.innerHTML=crop(x[1]);});
-  var w=document.getElementById('askWa');
-  if(w)w.href='https://wa.me/'+WA_ADMIN+'?text='+encodeURIComponent('Halo Closet Girls, aku mau tanya dulu ya \u2661');
-})();
-/* Ganti nama, harga, ukuran, kondisi di sini. */
-const PRODUCTS = [
-  {id:1,name:'Kemeja Motif Bunga (Coklat & Krem)',cat:'atasan', size:'L',  cond:'9/10',price:55000,bg:'#f4b6c2',img:'kemeja'},
-  {id:2,name:'Jeans Wide Leg Highwaist',          cat:'bawahan',size:'28', cond:'8/10',price:85000,bg:'#fbd5df',img:'jeans'},
-  {id:3,name:'Dress Floral Pink Midi',            cat:'dress',  size:'M',  cond:'9/10',price:95000,bg:'#f6cdd8',img:'dress'},
-  {id:4,name:'Hoodie Kupu-Kupu Abu',              cat:'jaket',  size:'L',  cond:'9/10',price:90000,bg:'#fde3da',img:'hoodie'},
-  {id:5,name:'Cardigan Rajut Pita Pink',          cat:'jaket',  size:'All',cond:'9/10',price:75000,bg:'#fbd5df',img:'cardigan'},
-  {id:6,name:'Rok Panjang Kotak Biru',            cat:'bawahan',size:'M',  cond:'9/10',price:60000,bg:'#f6cdd8',img:'rok'}
-];
-function pic(p){ return crop(p.img,p.name); }
-
-/* ====== penyimpanan di browser ====== */
-const store = {
-  get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v===null?d:v}catch(e){return d}},
-  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-};
-let cart = store.get('cg_cart',[]);
-let favs = store.get('cg_fav',[]);
-let session = store.get('cg_session',null);
-let filter = 'semua';
-let sortBy = 'baru';
-let afterLogin = null;
-
-const $ = id => document.getElementById(id);
-const rp = n => 'Rp' + n.toLocaleString('id-ID');
-const byId = id => PRODUCTS.find(p => p.id === id);
-const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-
-/* ====== kata-kata thrift & kamus (ganti teks sesukamu) ====== */
-const QUOTES = [
-  'Baju lama, cerita baru.',
-  'Gayamu nggak harus mahal, cukup jeli.',
-  'Satu baju dipakai lagi, satu cerita berlanjut.',
-  'Dompet senang, bumi lega, lemari makin seru.',
-  'Yang unik bukan yang paling baru, tapi yang cuma ada satu.',
-  'Thrift itu bukan soal murah, tapi soal pintar memilih.'
-];
-const NOTE_BG = ['#ffd1de','#f9b4cb','#fbe0e6','#f78bb1'];
-const NOTE_ROT = [-2,1.5,-1,2,-1.5,1];
-$('notes').innerHTML = QUOTES.map((q,i) =>
-  `<blockquote class="note2" style="background:${NOTE_BG[i%4]};--r:${NOTE_ROT[i]}deg">${q}</blockquote>`).join('');
-const DICT = [
-  ['Thrift','Belanja barang bekas yang masih layak pakai dengan harga bersahabat.'],
-  ['Preloved','Barang yang sudah pernah dipakai orang lain dan siap dipakai lagi.'],
-  ['1 of 1','Hanya ada satu. Kalau sudah terjual, tidak ada stok ulang.'],
-  ['Fast fashion','Pakaian murah yang diproduksi cepat dan massal mengikuti tren, sering cepat dibuang.'],
-  ['Slow fashion','Beli lebih sedikit, pilih yang awet, dan pakai selama mungkin.'],
-  ['Mix & match','Memadukan atasan dan bawahan berbeda jadi satu outfit baru.']
-];
-$('dict').innerHTML = DICT.map(([t,d]) => `<div><b>${t.replace('&','&amp;')}</b><p>${d}</p></div>`).join('');
-let qi = Math.floor(Math.random()*QUOTES.length);
-function rotateQuote(){
-  qi = (qi + 1) % QUOTES.length;
-  $('cartQuote').textContent = '“' + QUOTES[qi] + '”';
-}
-
-/* ====== hiasan: marquee, hero, hitung mundur ====== */
-const words = ['Thrift','Baju lama, cerita baru','Preloved','1 of 1','Gaya hemat, bumi senang','Stok baru tiap Jumat','Dicuci bersih','Satu baju, satu cerita','Mulai Rp25.000'];
-const strip = words.map(w => `<span>${w}</span><b>&#10047;</b>`).join('');
-$('track').innerHTML = strip + strip + strip + strip;
-$('h1').innerHTML = pic(Object.assign({},byId(4)));
-$('h2').innerHTML = pic(byId(3));
-$('h3').innerHTML = pic(byId(5));
-[['h1','#fde3da'],['h2','#f6cdd8'],['h3','#fbd5df']].forEach(([id,c]) => $(id).style.cssText = 'background:'+c+';border-radius:8px');
-
-function nextDrop(){
-  const n = new Date(), d = new Date(n);
-  d.setHours(DROP_HOUR,0,0,0);
-  d.setDate(n.getDate() + ((5 - n.getDay() + 7) % 7));
-  if(d <= n) d.setDate(d.getDate() + 7);
-  return d;
-}
-let dropAt = nextDrop();
-function tick(){
-  let s = Math.max(0, Math.floor((dropAt - new Date())/1000));
-  if(s === 0) dropAt = nextDrop();
-  const d = Math.floor(s/86400), h = Math.floor(s%86400/3600), m = Math.floor(s%3600/60), x = s%60;
-  const cell = (v,l) => `<span>${String(v).padStart(2,'0')}<small>${l}</small></span>`;
-  $('clock').innerHTML = cell(d,'HARI') + cell(h,'JAM') + cell(m,'MNT') + cell(x,'DTK');
-}
-tick(); setInterval(tick, 1000);
-
-/* ====== toast & konfeti ====== */
-let tt;
-function toast(msg){
-  const t = $('toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2200);
-}
-function confetti(x,y){
-  if(reduce) return;
-  const bits = ['\u2665','\u273F','\u2726','\u2736','\u2740'];
-  const cols = ['#d6336c','#ff9fc2','#ffc928','#8fd4b4','#b79be0'];
-  for(let i=0;i<16;i++){
-    const e = document.createElement('span');
-    e.className = 'cf';
-    e.textContent = bits[i % bits.length];
-    e.style.color = cols[i % cols.length];
-    e.style.left = x+'px'; e.style.top = y+'px';
-    document.body.appendChild(e);
-    const a = Math.random()*Math.PI*2, v = 60 + Math.random()*90;
-    e.animate([
-      {transform:'translate(0,0) scale(.5) rotate(0)',opacity:1},
-      {transform:`translate(${Math.cos(a)*v}px,${Math.sin(a)*v - 50}px) scale(1.3) rotate(${Math.random()*360}deg)`,opacity:1,offset:.6},
-      {transform:`translate(${Math.cos(a)*v*1.2}px,${Math.sin(a)*v + 70}px) scale(.8) rotate(540deg)`,opacity:0}
-    ],{duration:900 + Math.random()*400,easing:'cubic-bezier(.2,.7,.3,1)'}).onfinish = () => e.remove();
-  }
-}
-
-/* ====== produk ====== */
-function renderGrid(){
-  let list = PRODUCTS.filter(p => filter==='semua' || (filter==='fav' ? favs.includes(p.id) : p.cat===filter));
-  if(sortBy==='murah') list = [...list].sort((a,b) => a.price-b.price);
-  if(sortBy==='mahal') list = [...list].sort((a,b) => b.price-a.price);
-  $('grid').innerHTML = list.length ? list.map(p => {
-    const inCart = cart.includes(p.id), fav = favs.includes(p.id);
-    return `<article class="item"><div class="pic" style="background-color:${p.bg}">
-      <span class="badge">1 of 1</span>
-      <button class="fav" data-fav="${p.id}" type="button" aria-pressed="${fav}" aria-label="Favoritkan ${p.name}">${fav?'\u2665':'\u2661'}</button>
-      ${pic(p)}</div>
-      <div class="info"><h3>${p.name}</h3>
-      <div class="chips"><span class="chip c1">Ukuran ${p.size}</span><span class="chip c2">Kondisi ${p.cond}</span></div>
-      <div class="price">${rp(p.price)}</div>
-      <button class="btn small ${inCart?'ghost':''}" data-add="${p.id}" type="button">${inCart?'Hapus dari keranjang':'Tambah ke keranjang'}</button></div></article>`;
-  }).join('') : `<p class="nores"><span class="hand" style="font-size:1.6rem">Belum ada di sini</span><br>${filter==='fav'?'Tekan ikon hati pada barang untuk menyimpannya.':'Coba kategori lain ya.'}</p>`;
-}
-document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
-  filter = b.dataset.f;
-  document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x===b));
-  renderGrid();
-}));
-$('sort').onchange = e => { sortBy = e.target.value; renderGrid(); };
-$('grid').addEventListener('click', e => {
-  const f = e.target.closest('[data-fav]');
-  if(f){
-    const id = +f.dataset.fav;
-    favs = favs.includes(id) ? favs.filter(x => x!==id) : [...favs, id];
-    store.set('cg_fav', favs);
-    renderGrid();
-    return;
-  }
-  const a = e.target.closest('[data-add]');
-  if(!a) return;
-  const id = +a.dataset.add;
-  if(cart.includes(id)){ cart = cart.filter(x => x!==id); toast('Dihapus dari keranjang'); }
-  else {
-    cart = [...cart, id];
-    const r = a.getBoundingClientRect();
-    confetti(r.left + r.width/2, r.top + r.height/2);
-    toast(byId(id).name + ' masuk keranjang \u2665');
-  }
-  saveCart();
-});
-
-/* ====== mix & match ====== */
-const TOPS = PRODUCTS.filter(p => p.cat==='atasan' || p.cat==='jaket');
-const BOTS = PRODUCTS.filter(p => p.cat==='bawahan');
-let ti = 0, bi = 0;
-function slot(el,p,label,key){
-  el.innerHTML = `<div class="view" style="background-color:${p.bg}">${pic(p)}</div>
-    <b>${p.name}</b><small>${label} &middot; ${rp(p.price)}</small>
-    <div class="arrows"><button type="button" data-mix="${key}-1" aria-label="${label} sebelumnya">&#8249;</button><button type="button" data-mix="${key}1" aria-label="${label} berikutnya">&#8250;</button></div>`;
-}
-function renderMix(){
-  const t = TOPS[ti], b = BOTS[bi];
-  slot($('slotTop'),t,'Atasan','t');
-  slot($('slotBot'),b,'Bawahan','b');
-  $('mixTotal').textContent = rp(t.price + b.price);
-}
-$('mix').addEventListener('click', e => {
-  const m = e.target.closest('[data-mix]');
-  if(m){
-    const k = m.dataset.mix[0], d = +m.dataset.mix.slice(1);
-    if(k==='t') ti = (ti + d + TOPS.length) % TOPS.length; else bi = (bi + d + BOTS.length) % BOTS.length;
-    renderMix();
-  }
-});
-$('mixShuffle').onclick = () => { ti = Math.floor(Math.random()*TOPS.length); bi = Math.floor(Math.random()*BOTS.length); renderMix(); };
-$('mixAdd').onclick = e => {
-  [TOPS[ti].id, BOTS[bi].id].forEach(id => { if(!cart.includes(id)) cart.push(id); });
-  const r = e.target.getBoundingClientRect();
-  confetti(r.left + r.width/2, r.top);
-  toast('Outfit masuk keranjang \u2665');
-  saveCart();
-};
-
-/* ====== keranjang ====== */
-function saveCart(){
-  store.set('cg_cart',cart); renderCart(); renderGrid();
-  const c = $('count'); c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump');
-}
-function renderCart(){
-  $('count').textContent = cart.length;
-  const items = cart.map(byId).filter(Boolean);
-  const sub = items.reduce((s,p) => s+p.price, 0);
-  $('lines').innerHTML = items.length ? items.map(p => `
-    <div class="line"><div class="mini" style="background-color:${p.bg}">${pic(p)}</div>
-    <div class="t"><b>${p.name}</b><small>Ukuran ${p.size} &middot; kondisi ${p.cond}</small><span class="price2">${rp(p.price)}</span></div>
-    <button class="rm" data-rm="${p.id}" type="button" aria-label="Hapus ${p.name}">&times;</button></div>`).join('')
-    : `<div class="empty"><svg viewBox="10 4 80 40" aria-hidden="true">${HANGER}</svg><span class="hand">Lemarimu masih kosong</span><p>Yuk pilih yang kamu suka.</p><button class="btn small" data-go type="button">Cari baju</button></div>`;
-  $('subtotal').textContent = rp(sub);
-  $('rTotal').textContent = rp(sub);
-  $('rCount').textContent = items.length + ' pcs';
-  $('cartSub').textContent = items.length ? items.length + ' barang, semuanya 1 of 1' : 'kosong dulu';
-  $('checkoutBtn').disabled = !items.length;
-}
-$('lines').addEventListener('click', e => {
-  if(e.target.closest('[data-go]')){
-    openCart(false);
-    $('koleksi').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
-    return;
-  }
-  const rm = e.target.closest('[data-rm]');
-  if(rm){ cart = cart.filter(x => x !== +rm.dataset.rm); saveCart(); }
-});
-function openCart(o){
-  $('drawer').classList.toggle('open',o);
-  $('scrim').classList.toggle('open',o);
-  $('drawer').setAttribute('aria-hidden', !o);
-  if(o){ rotateQuote(); $('closeCart').focus(); }
-}
-$('openCart').onclick = () => openCart(true);
-$('closeCart').onclick = $('scrim').onclick = () => openCart(false);
-document.addEventListener('keydown', e => { if(e.key==='Escape') openCart(false); });
-
-/* ====== masuk / daftar (demo di browser, bukan server) ====== */
-async function hash(s){
-  if(window.crypto && crypto.subtle){
-    const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-    return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2,'0')).join('');
-  }
-  return btoa(unescape(encodeURIComponent(s)));
-}
-let mode = 'login';
-function setMode(m){
-  mode = m;
-  $('tabLogin').setAttribute('aria-selected', m==='login');
-  $('tabReg').setAttribute('aria-selected', m==='reg');
-  $('nameWrap').hidden = m==='login';
-  $('authTitle').textContent = m==='login' ? 'Masuk' : 'Daftar akun';
-  $('authSubmit').textContent = m==='login' ? 'Masuk' : 'Daftar';
-  $('aPass').autocomplete = m==='login' ? 'current-password' : 'new-password';
-  $('authErr').textContent = '';
-}
-$('tabLogin').onclick = () => setMode('login');
-$('tabReg').onclick = () => setMode('reg');
-$('authCancel').onclick = () => { afterLogin = null; $('authDlg').close(); };
-function openAuth(note){
-  $('authNote').textContent = note || '';
-  $('authForm').reset();
-  setMode('login');
-  $('authDlg').showModal();
-}
-$('authForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const email = $('aEmail').value.trim().toLowerCase();
-  const pass = $('aPass').value;
-  const name = $('aName').value.trim();
-  const err = t => { $('authErr').textContent = t; };
-  if(!/^\S+@\S+\.\S+$/.test(email)) return err('Format email belum benar.');
-  if(pass.length < 6) return err('Kata sandi minimal 6 karakter.');
-  const users = store.get('cg_users',{});
-  const h = await hash(pass);
-  if(mode==='reg'){
-    if(!name) return err('Nama wajib diisi.');
-    if(users[email]) return err('Email sudah terdaftar. Silakan masuk.');
-    users[email] = {name, h};
-    store.set('cg_users', users);
-    session = {email, name};
-  } else {
-    const u = users[email];
-    if(!u || u.h !== h) return err('Email atau kata sandi salah.');
-    session = {email, name:u.name};
-  }
-  store.set('cg_session', session);
-  $('authDlg').close();
-  renderUser();
-  toast('Hai, ' + session.name.split(' ')[0] + '! Selamat datang \u2665');
-  if(afterLogin){ const f = afterLogin; afterLogin = null; f(); }
-});
-function renderUser(){
-  const box = $('userbox');
-  box.textContent = '';
-  if(session){
-    const s = document.createElement('span');
-    s.textContent = 'Hai, ' + session.name.split(' ')[0] + ' ';
-    const b = document.createElement('button');
-    b.className = 'linkbtn'; b.type = 'button'; b.textContent = 'Keluar';
-    b.onclick = () => { session = null; store.set('cg_session',null); renderUser(); };
-    box.append(s,b);
-  } else {
-    const b = document.createElement('button');
-    b.className = 'btn ghost small'; b.type = 'button'; b.textContent = 'Masuk / Daftar';
-    b.onclick = () => openAuth();
-    box.append(b);
-  }
-}
-
-/* ====== checkout ====== */
-$('checkoutBtn').onclick = () => {
-  if(!cart.length) return;
-  if(!session){
-    afterLogin = startCheckout;
-    openCart(false);
-    openAuth('Masuk atau daftar dulu untuk melanjutkan checkout.');
-    return;
-  }
-  startCheckout();
-};
-function startCheckout(){
-  openCart(false);
-  const items = cart.map(byId).filter(Boolean);
-  const sub = items.reduce((s,p) => s+p.price, 0);
-  $('coSum').innerHTML = items.map(p => `<div><span>${p.name}</span><span>${rp(p.price)}</span></div>`).join('')
-    + `<div style="margin-top:8px;font-weight:800"><span>Subtotal</span><span>${rp(sub)}</span></div>`
-    + `<div style="opacity:.75"><span>Ongkir</span><span>dihitung admin</span></div>`;
-  $('cName').value = session.name;
-  $('coErr').textContent = '';
-  $('coDlg').showModal();
-}
-$('coCancel').onclick = () => $('coDlg').close();
-$('coForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = $('cName').value.trim(), phone = $('cPhone').value.trim(), addr = $('cAddr').value.trim(), pay = $('cPay').value;
-  if(!name || !addr) return $('coErr').textContent = 'Nama dan alamat wajib diisi.';
-  if(!/^(\+?62|0)8\d{7,12}$/.test(phone.replace(/[\s-]/g,''))) return $('coErr').textContent = 'Nomor WhatsApp belum benar (contoh 08123456789).';
-  const items = cart.map(byId).filter(Boolean);
-  const total = items.reduce((s,p) => s+p.price, 0);
-  const id = 'CG' + Date.now().toString().slice(-7);
-  const msg = [
-    'Pesanan baru ' + id,
-    '',
-    ...items.map((p,i) => (i+1) + '. ' + p.name + ' (' + p.size + ') - ' + rp(p.price)),
-    '',
-    'Subtotal: ' + rp(total) + ' (belum termasuk ongkir)',
-    'Pembayaran: ' + pay,
-    '',
-    'Nama: ' + name,
-    'WhatsApp: ' + phone,
-    'Alamat: ' + addr,
-    'Akun: ' + session.email
-  ].join('\n');
-  const url = 'https://wa.me/' + WA_ADMIN + '?text=' + encodeURIComponent(msg);
-  const orders = store.get('cg_orders',[]);
-  orders.push({id, email:session.email, items:items.map(p=>p.id), total, pay, at:new Date().toISOString()});
-  store.set('cg_orders', orders);
-  cart = []; saveCart();
-  $('coDlg').close();
-  $('okId').textContent = id;
-  $('okWa').href = url;
-  $('okDlg').showModal();
-  confetti(window.innerWidth/2, window.innerHeight/3);
-  window.open(url, '_blank', 'noopener');
-});
-$('okClose').onclick = () => $('okDlg').close();
-
-renderUser(); renderGrid(); renderCart(); renderMix(); rotateQuote();
-</script>
-</body>
-</html>
+        <div class="fl f3">
